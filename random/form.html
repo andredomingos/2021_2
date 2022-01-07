@@ -1,0 +1,46 @@
+<form action="https://api.ometria.com/forms/signup" method="post">
+	<!-- Whistles : LF Markey -->
+	<input type="hidden" name="__form_id" value="f35882f7bbbdf1ca5db36fae6939b3c9" />
+	<input type="hidden" name="email" value="" autocomplete="off" />
+	<div style="display:none !important">
+		<input name="__email" type="email" value="" autocomplete="off" />
+	</div>
+	<input name="@account" type="hidden" value="849fb05b9d1f0884" />
+	<input name="@return_url" type="hidden" value="" />
+	<input name="@subscription_status" type="hidden" value="UNCHANGED" />
+	<!-- Form elements go here: Style as you wish -->
+	<table>
+		<tr>
+			<th>Email address</th>
+			<td>
+				<input name="ue" type="text" value="" />
+			</td>
+		</tr>
+		<tr>
+			<th>First name</th>
+			<td>
+				<input name="firstname" type="text" value="" />
+			</td>
+		</tr>
+		<tr>
+			<th>Last name</th>
+			<td>
+				<input name="lastname" type="text" value="" />
+			</td>
+		</tr>
+		<tr>
+			<th>Sign up options:</th>
+			<td>
+				<input name="@add_to_lists[]" id="lfmarkey" type="checkbox" value="6086" />
+				<label for="lfmarkey"> LF Markey </label>
+				<input name="@subscription_status" id="marketing" type="checkbox" value="SUBSCRIBED" />
+				<!-- you will need to use script to add to 'LF Markey and marketing' list -- 
+					<input name="@add_to_lists[]" id="marketing" type="hidden" value="6087" /> 
+				-->
+				<label for="marketing"> LF Markey and marketing </label>
+			</td>
+		</tr>
+	</table>
+	<input type="submit" value="Submit form" style="padding: 5px 20px;" name="submit" />
+	<!-- End of form elements -->
+</form>

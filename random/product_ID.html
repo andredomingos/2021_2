@@ -1,0 +1,35 @@
+{% set max_products=3 %}
+{% set cols=3 %}
+{% set products = event.product_id %}
+{% for x in range(max_products) %}
+  {% if loop.index0 % cols == 0 %}
+    <table class="row collapse" style="display: table; padding: 0; position: relative; width: 100%">
+      <tbody>
+        <tr>
+        {% endif %}
+        {% if products[x] %}
+          <th class="small-12 large-4 columns first last" style="font-weight: normal; margin: 0 auto; padding-bottom: 16px; padding-left: 10px; padding-right: 10px; text-align: center; width: 224.66667px">
+            <table style="width: 100%">
+              <tr>
+                <th style="font-weight: normal; text-align: center">
+                  <center style="min-width: 168.66667px; width: 100%">
+                      <a href="{{products[x].url}}" target="_blank" align="center" class="float-center" style="color: #c51d2d; text-decoration: none">
+                          <img class="small-float-center float-center" src="{{products[x].image_url}}&size=300x300&mode=pad" width="150" height="150" style="border: none; clear: both; display: block; float: none; margin: 0 auto; max-height: 150px; max-width: 150px; outline: none; text-align: center; text-decoration: none; width: 100%">
+                      </a>
+                      <table align="center" class="spacer float-center" style="float: none; margin: 0 auto; text-align: center; width: 100%"><tbody><tr><td height="10px" style="font-size:10px;line-height:10px">&#xA0;</td></tr></tbody></table> 
+                      <p class="text-center float-center" style="-moz-hyphens: none; -webkit-hyphens: none; hyphens: none; margin: 0 0 10px; min-height: 3em; text-align: center; width: 90%" align="center"><a href="{{products[x].url}}" target="_blank" style="color: #e679a5; text-decoration: none">{{products[x].title}}</a></p>
+                      <p class="text-center float-center" style="-moz-hyphens: none; -webkit-hyphens: none; hyphens: none; margin: 0 0 10px; text-align: center; width: 100%" align="center">{{products[x].price}}</p>
+                  </center>
+                </th>
+              </tr>
+            </table>
+          </th>
+        {% endif %}
+        {% if loop.index % cols == 0 %}
+        </tr>
+      </tbody>
+    </table>
+    {% endif %}
+{% endfor %}
+
+

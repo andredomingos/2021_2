@@ -1,0 +1,39 @@
+<table om:block="Price drop block" cellpadding="0" cellspacing="0" border="0" width="100%" role="presentation">
+  <tr>
+    <td align="center">
+      <table cellspacing="0" cellpadding="0" border="0" width="100%" class="w95" align="center" role="presentation">
+        <tr>
+          <td align="center">
+            <table cellspacing="0" cellpadding="0" border="0" width="100%" role="presentation">
+              <tr align="center">
+                <td align="center">
+                  <a href="{{product.url}}" target="_blank" style="display:block;">
+                    <img src="{{product.image_url|safe}}&size=500x500" class="w80" alt="{{product.title}}" border="0" width="300" height="auto" style="display:block; margin:0 auto; max-width:100%; padding:0;" />
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th align="center" style="padding: 0 4px 0 4px;">
+            <p style="text-align: center; margin: 5px 0;"> {{product.title}} </p>
+            <p style="text-align:center;"><strike>{{product.price_drop_previous_price}}</strike> </p>
+            <p style="text-align:center;">{{ product.price_drop_new_price }}</p>
+          </th>
+        </tr>
+        <tr align="center">
+          <td om:editable="html" om:id="cta-price-drop" align="center" style="padding:15px 0">
+            <table class="wf btnwidth fl" role="presentation" border="0" cellpadding="0" cellspacing="0" height="25" align="center" bgcolor="#000001" style="border: solid 1px #000001; border-radius:1px; width:inherit;">
+               <tbody>
+                  <tr>
+                     <td align="center" style="font-family:FSMeridian-regular, 'Gill Sans', Arial, sans-serif; font-weight:lighter; font-size:14px;vertical-align:top;background:none;border-radius:0px;text-align:center;color:#ffffff; letter-spacing:0.5px" valign="top"><a href="{{product.url}}" target="_blank" style="display:inline-block;color:#ffffff ;background:none;border:solid 1px #000001 ;border-radius:0px;box-sizing:border-box;text-decoration:none;font-size:11px; letter-spacing:0.5px; margin:0;padding:5px 35px;border-color:#000001;" class="wf paddingbtn">CTA BUTTON</a></td>
+                  </tr>
+               </tbody>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

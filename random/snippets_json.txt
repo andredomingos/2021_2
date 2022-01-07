@@ -1,0 +1,11 @@
+============
+Loyalty Lion
+============
+Params
+"properties": {
+  	"loyaltylion_tier_name": "Gold",
+  	"loyaltylion_approved_points": "20,000"
+},
+Merge Tags
+{{ profile.properties.loyaltylion_tier_name }}
+{{ profile.properties.loyaltylion_approved_points }}

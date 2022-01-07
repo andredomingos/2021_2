@@ -1,0 +1,99 @@
+{% from 'macros.html' import list_checkbox_macro, list_radio_macro, sms_checkbox_macro, append_phone_number_macro_resources, phone_number_macro, flash_messages with context %}
+<style>
+body{
+background:#fefefe;
+color:#333333;
+}
+h1{font-weight:bold;font-size: 24px;margin-bottom:5px;margin-top:10px}
+h2{font-weight:bold;font-size: 18px;margin-bottom:5px;margin-top:0}
+p{ margin-bottom:10px;}
+.container{
+text-align:left;
+border:none;
+color:#333333;
+font-size: 14px;
+}
+.alert-success { background-color: #ffffff;border:1px solid #3C7642; color: #3C7642; }
+.btn {
+color: #fff;
+background-color: #001;
+border-color: #001;
+border-radius:3px;
+padding: 11px 12px;
+}
+.btn:hover {
+color: #fff;
+background-color: #636363;
+border-color: #636363;
+border-radius:3px;
+}
+.btn-primary {
+color: #fff;
+background-color: #B7B7B7;
+border-color: #B7B7B7;
+border-radius:3px;
+}
+.btn-primary:hover {
+color: #fff;
+background-color: #636363;
+border-color: #636363;
+}
+label
+{
+display:block !important;
+margin-bottom: 10px;
+padding-top:0;
+font-size: 14px;
+font-weight:700;
+}
+input[type="checkbox"] {
+margin-right:5px;
+font-weight:bold;
+}
+@media only screen and (max-width: 600px) {
+h1{font-size: 20px;}
+h2{font-size: 16px;}
+.width-btn{width:100%;}
+.mob-center{text-align:center !important; display:block;padding: 10px 0}
+.nobmargin {margin-bottom: 0;}
+.notbpadd {padding-top:0 !important;padding-bottom:0 !important;}
+.boldfs {font-weight:bold;}
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<div class='container'>
+<br/>
+<center>
+<a href=""><img alt="Ometria" src="https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/model_v3/assets/img/logo-34c0ca50be.png" width="270"/></a>
+</center>
+<br/><br/>
+<p class="col-sm-offset-1">
+Please provide the information below and your preferences will be automatically updated in our database.
+</p>
+<br/>
+<form action="" class="form-horizontal" method="post">
+{{ flash_messages(success_msg='Thank you for updating your preferences', error_msg='Whoops, something went wrong') }}
+<div class="form-group">
+<label class="col-sm-3 control-label">Email Address</label>
+<div class="col-sm-7">
+<input class="form-control" name="email" type="email" value="{{ profile.email}}"/>
+</div>
+</div>
+<div class="form-group">
+<label class="col-sm-3 control-label">First name</label>
+<div class="col-sm-7">
+<input class="form-control" name="firstname" value="{{ profile.firstname }}"/>
+</div>
+</div>
+<div class="form-group">
+<label class="col-sm-3 control-label">Last name</label>
+<div class="col-sm-7">
+<input class="form-control" name="lastname" value="{{ profile.lastname }}"/>
+</div>
+</div>
+<br/>
+<div class="col-sm-offset-3 col-sm-9">
+<input class="btn btn-primary" name="action:update" type="submit" value="Save changes" onClick="validatePhone(event)" />
+<a href="{{ url_for('preferences_centre_view', account_hash=account.hash, profile_hash=profile.hash, route='unsubscribe', **request.args)}}" class="btn btn-block-sm">Unsubscribe from all marketing emails</a>
+</form>
+</div>

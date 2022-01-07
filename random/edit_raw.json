@@ -1,0 +1,600 @@
+{
+  "unsub": "https://console.ometria.com/misc/unsubscribe.html",
+  "email": {
+    "campaign_identifier": "123:TF:456_202103121629",
+    "campaign_title": "campaign_title",
+    "coupon_code": "XXX123",
+    "to_email_address": "example@example.com",
+    "archive_url": "https://www.ometria.com/",
+    "account_hash": "developer_testing",
+    "preheader": ""
+  },
+  "profile": {
+    "average_order_value": 0,
+    "country": "GB",
+    "date_of_birth": "1980-01-01",
+    "email": "example@example.com",
+    "firstname": "Bob",
+    "gender": null,
+    "lastname": "Jones",
+    "lifecycle_status": "ACTIVE",
+    "marketing_optin": true,
+    "middlename": null,
+    "name": "Bob Jones",
+    "number_of_attempted_orders": 0,
+    "number_of_items_purchased": 0,
+    "number_of_orders": 0,
+    "number_of_visits": 0,
+    "prefix": null,
+    "properties": {
+      "field_name_1": "value_1",
+      "field_name_2": "value_2",
+      "field_name_3": "value_3"
+    },
+    "suffix": null,
+    "total_revenue": 0,
+    "segment_ids": [
+      2,
+      5
+    ],
+    "last_store": null,
+    "home_store": "fr-paris"
+  },
+  "order": {
+    "id": "000001",
+    "currency": "GBP",
+    "products": [
+      {
+        "@type": "product",
+        "id": "559",
+        "sku": "",
+        "title": "Val",
+        "price_raw": 6,
+        "price": "£6",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=559",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fres.cloudinary.com%2Fpatch-gardens%2Fimage%2Fupload%2Fc_fill%2Cf_auto%2Ch_840%2Cq_auto%3Agood%2Cw_840%2Fv1578052065%2Fxkjn3twk3xxzjd1fvrej.jpg",
+        "stores": [
+          "gb-london"
+        ],
+        "properties": {
+          "to_price_gb_london": 6,
+          "from_price_gb_london": 6,
+          "secondary_name_gb_london": "Sweetheart plant"
+        },
+        "labels": {},
+        "line_total": "£6",
+        "line_total_raw": 6,
+        "quantity": 1
+      },
+      {
+        "@type": "product",
+        "id": "338",
+        "sku": "",
+        "title": "Bali",
+        "price_raw": 30,
+        "price": "£30",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=338",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fres.cloudinary.com%2Fpatch-gardens%2Fimage%2Fupload%2Fc_fill%2Cf_auto%2Ch_840%2Cq_auto%3Agood%2Cw_840%2Fv1563803751%2Fproducts%2Fschefflera-on-lava-c06688.jpg",
+        "stores": [
+          "gb-london",
+          "fr-paris"
+        ],
+        "properties": {
+          "to_price_gb_london": 30,
+          "from_price_fr_paris": 35,
+          "secondary_name_fr_paris": "Schefflera sur son lit de lave",
+          "secondary_name_gb_london": "Schefflera on Lava",
+          "to_price_fr_paris": 35,
+          "from_price_gb_london": 30
+        },
+        "labels": {},
+        "line_total": "£30",
+        "line_total_raw": 30,
+        "quantity": 1
+      },
+      {
+        "@type": "product",
+        "id": "284",
+        "sku": "",
+        "title": "Gaby",
+        "price_raw": 8,
+        "price": "£8",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=284",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fres.cloudinary.com%2Fpatch-gardens%2Fimage%2Fupload%2Fc_fill%2Cf_auto%2Ch_840%2Cq_auto%3Agood%2Cw_840%2Fv1536059237%2Fproducts%2Ftradescantia-sitara-6764f4.jpg",
+        "stores": [
+          "gb-london",
+          "fr-paris"
+        ],
+        "properties": {
+          "to_price_gb_london": 8,
+          "from_price_fr_paris": 7,
+          "secondary_name_fr_paris": "Tradescantia spathacea « Sitara »",
+          "secondary_name_gb_london": "Tradescantia 'sitara'",
+          "to_price_fr_paris": 7,
+          "from_price_gb_london": 8
+        },
+        "labels": {},
+        "line_total": "£8",
+        "line_total_raw": 8,
+        "quantity": 1
+      }
+    ],
+    "matched_products": [
+      {
+        "@type": "product",
+        "id": "559",
+        "sku": "",
+        "title": "Val",
+        "price_raw": 6,
+        "price": "£6",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=559",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fres.cloudinary.com%2Fpatch-gardens%2Fimage%2Fupload%2Fc_fill%2Cf_auto%2Ch_840%2Cq_auto%3Agood%2Cw_840%2Fv1578052065%2Fxkjn3twk3xxzjd1fvrej.jpg",
+        "stores": [
+          "gb-london"
+        ],
+        "properties": {
+          "to_price_gb_london": 6,
+          "from_price_gb_london": 6,
+          "secondary_name_gb_london": "Sweetheart plant"
+        },
+        "labels": {}
+      },
+      {
+        "@type": "product",
+        "id": "338",
+        "sku": "",
+        "title": "Bali",
+        "price_raw": 30,
+        "price": "£30",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=338",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fres.cloudinary.com%2Fpatch-gardens%2Fimage%2Fupload%2Fc_fill%2Cf_auto%2Ch_840%2Cq_auto%3Agood%2Cw_840%2Fv1563803751%2Fproducts%2Fschefflera-on-lava-c06688.jpg",
+        "stores": [
+          "gb-london",
+          "fr-paris"
+        ],
+        "properties": {
+          "to_price_gb_london": 30,
+          "from_price_fr_paris": 35,
+          "secondary_name_fr_paris": "Schefflera sur son lit de lave",
+          "secondary_name_gb_london": "Schefflera on Lava",
+          "to_price_fr_paris": 35,
+          "from_price_gb_london": 30
+        },
+        "labels": {}
+      },
+      {
+        "@type": "product",
+        "id": "284",
+        "sku": "",
+        "title": "Gaby",
+        "price_raw": 8,
+        "price": "£8",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=284",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fres.cloudinary.com%2Fpatch-gardens%2Fimage%2Fupload%2Fc_fill%2Cf_auto%2Ch_840%2Cq_auto%3Agood%2Cw_840%2Fv1536059237%2Fproducts%2Ftradescantia-sitara-6764f4.jpg",
+        "stores": [
+          "gb-london",
+          "fr-paris"
+        ],
+        "properties": {
+          "to_price_gb_london": 8,
+          "from_price_fr_paris": 7,
+          "secondary_name_fr_paris": "Tradescantia spathacea « Sitara »",
+          "secondary_name_gb_london": "Tradescantia 'sitara'",
+          "to_price_fr_paris": 7,
+          "from_price_gb_london": 8
+        },
+        "labels": {}
+      }
+    ],
+    "total_raw": 200,
+    "total": "£200",
+    "reorder_url": "http://www.example.com/checkout"
+  },
+  "basket": {
+    "currency": "GBP",
+    "products": [
+      {
+        "@type": "product",
+        "id": "559",
+        "sku": "",
+        "title": "Val",
+        "price_raw": 6,
+        "price": "£6",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=559",
+        "image_url": "https://dummyimage.com/500x300/000000/FFFFFF&text=slide1",
+        "stores": [
+          "gb-london"
+        ],
+        "properties": {
+          "to_price_gb_london": 6,
+          "from_price_gb_london": 6,
+          "image_urlNew": "https://dummyimage.com/500x300/FFFFFF/000000&text=slide2",
+          "secondary_name_gb_london": "Sweetheart plant"
+        },
+        "labels": {},
+        "line_total": "£6",
+        "line_total_raw": 6,
+        "quantity": 1
+      },
+      {
+        "@type": "product",
+        "id": "338",
+        "sku": "",
+        "title": "Bali",
+        "price_raw": 30,
+        "price": "£30",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=338",
+        "image_url": "https://dummyimage.com/500x300/000000/FFFFFF&text=slide1",
+        "stores": [
+          "gb-london",
+          "fr-paris"
+        ],
+        "properties": {
+          "to_price_gb_london": 30,
+          "from_price_fr_paris": 35,
+          "secondary_name_fr_paris": "Schefflera sur son lit de lave",
+          "secondary_name_gb_london": "Schefflera on Lava",
+          "image_urlNew": "https://dummyimage.com/500x300/FFFFFF/000000&text=slide2",
+          "to_price_fr_paris": 35,
+          "from_price_gb_london": 30
+        },
+        "labels": {},
+        "line_total": "£30",
+        "line_total_raw": 30,
+        "quantity": 1
+      },
+      {
+        "@type": "product",
+        "id": "284",
+        "sku": "",
+        "title": "Gaby",
+        "price_raw": 8,
+        "price": "£8",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=284",
+        "image_url": "https://dummyimage.com/500x300/000000/FFFFFF&text=slide1",
+        "stores": [
+          "gb-london",
+          "fr-paris"
+        ],
+        "properties": {
+          "to_price_gb_london": 8,
+          "from_price_fr_paris": 7,
+          "secondary_name_fr_paris": "Tradescantia spathacea « Sitara »",
+          "secondary_name_gb_london": "Tradescantia 'sitara'",
+          "image_urlNew": "https://dummyimage.com/500x300/FFFFFF/000000&text=slide2",
+          "to_price_fr_paris": 7,
+          "from_price_gb_london": 8
+        },
+        "labels": {},
+        "line_total": "£8",
+        "line_total_raw": 8,
+        "quantity": 1
+      }
+    ],
+    "matched_products": [
+      {
+        "@type": "product",
+        "id": "559",
+        "sku": "",
+        "title": "Val",
+        "price_raw": 6,
+        "price": "£6",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=559",
+        "image_url": "https://dummyimage.com/500x300/000000/FFFFFF&text=slide1",
+        "stores": [
+          "gb-london"
+        ],
+        "properties": {
+          "to_price_gb_london": 6,
+          "from_price_gb_london": 6,
+          "image_urlNew": "https://dummyimage.com/500x300/FFFFFF/000000&text=slide2",
+          "secondary_name_gb_london": "Sweetheart plant"
+        },
+        "labels": {}
+      },
+      {
+        "@type": "product",
+        "id": "338",
+        "sku": "",
+        "title": "Bali",
+        "price_raw": 30,
+        "price": "£30",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=338",
+        "image_url": "https://dummyimage.com/500x300/000000/FFFFFF&text=slide1",
+        "stores": [
+          "gb-london",
+          "fr-paris"
+        ],
+        "properties": {
+          "to_price_gb_london": 30,
+          "from_price_fr_paris": 35,
+          "secondary_name_fr_paris": "Schefflera sur son lit de lave",
+          "secondary_name_gb_london": "Schefflera on Lava",
+          "image_urlNew": "https://dummyimage.com/500x300/FFFFFF/000000&text=slide2",
+          "to_price_fr_paris": 35,
+          "from_price_gb_london": 30
+        },
+        "labels": {}
+      },
+      {
+        "@type": "product",
+        "id": "284",
+        "sku": "",
+        "title": "Gaby",
+        "price_raw": 8,
+        "price": "£8",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=284",
+        "image_url": "https://dummyimage.com/500x300/000000/FFFFFF&text=slide1",
+        "stores": [
+          "gb-london",
+          "fr-paris"
+        ],
+        "properties": {
+          "to_price_gb_london": 8,
+          "from_price_fr_paris": 7,
+          "secondary_name_fr_paris": "Tradescantia spathacea « Sitara »",
+          "image_urlNew": "https://dummyimage.com/500x300/FFFFFF/000000&text=slide2",
+          "secondary_name_gb_london": "Tradescantia 'sitara'",
+          "to_price_fr_paris": 7,
+          "from_price_gb_london": 8
+        },
+        "labels": {}
+      }
+    ],
+    "total_raw": 200,
+    "total": "£200",
+    "url": "http://www.example.com/basket"
+  },
+  "recommended_products": [
+    {
+      "@type": "product",
+      "id": "559",
+      "sku": "",
+      "title": "Val",
+      "price_raw": 6,
+      "price": "£6",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=559",
+      "image_url": "https://dummyimage.com/500x300/000000/FFFFFF&text=slide1",
+      "stores": [
+        "gb-london"
+      ],
+      "properties": {
+        "to_price_gb_london": 6,
+        "from_price_gb_london": 6,
+        "secondary_name_gb_london": "Sweetheart plant"
+      },
+      "labels": {}
+    },
+    {
+      "@type": "product",
+      "id": "338",
+      "sku": "",
+      "title": "Bali",
+      "price_raw": 30,
+      "price": "£30",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=338",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fres.cloudinary.com%2Fpatch-gardens%2Fimage%2Fupload%2Fc_fill%2Cf_auto%2Ch_840%2Cq_auto%3Agood%2Cw_840%2Fv1563803751%2Fproducts%2Fschefflera-on-lava-c06688.jpg",
+      "stores": [
+        "gb-london",
+        "fr-paris"
+      ],
+      "properties": {
+        "to_price_gb_london": 30,
+        "from_price_fr_paris": 35,
+        "secondary_name_fr_paris": "Schefflera sur son lit de lave",
+        "secondary_name_gb_london": "Schefflera on Lava",
+        "to_price_fr_paris": 35,
+        "from_price_gb_london": 30
+      },
+      "labels": {}
+    },
+    {
+      "@type": "product",
+      "id": "284",
+      "sku": "",
+      "title": "Gaby",
+      "price_raw": 8,
+      "price": "£8",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=284",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fres.cloudinary.com%2Fpatch-gardens%2Fimage%2Fupload%2Fc_fill%2Cf_auto%2Ch_840%2Cq_auto%3Agood%2Cw_840%2Fv1536059237%2Fproducts%2Ftradescantia-sitara-6764f4.jpg",
+      "stores": [
+        "gb-london",
+        "fr-paris"
+      ],
+      "properties": {
+        "to_price_gb_london": 8,
+        "from_price_fr_paris": 7,
+        "secondary_name_fr_paris": "Tradescantia spathacea « Sitara »",
+        "secondary_name_gb_london": "Tradescantia 'sitara'",
+        "to_price_fr_paris": 7,
+        "from_price_gb_london": 8
+      },
+      "labels": {}
+    }
+  ],
+  "products": [
+    {
+      "@type": "product",
+      "id": "559",
+      "sku": "",
+      "title": "Val",
+      "price_raw": 6,
+      "price": "£6",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=559",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fres.cloudinary.com%2Fpatch-gardens%2Fimage%2Fupload%2Fc_fill%2Cf_auto%2Ch_840%2Cq_auto%3Agood%2Cw_840%2Fv1578052065%2Fxkjn3twk3xxzjd1fvrej.jpg",
+      "stores": [
+        "gb-london"
+      ],
+      "properties": {
+        "to_price_gb_london": 6,
+        "from_price_gb_london": 6,
+        "secondary_name_gb_london": "Sweetheart plant"
+      },
+      "labels": {}
+    },
+    {
+      "@type": "product",
+      "id": "338",
+      "sku": "",
+      "title": "Bali",
+      "price_raw": 30,
+      "price": "£30",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=338",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fres.cloudinary.com%2Fpatch-gardens%2Fimage%2Fupload%2Fc_fill%2Cf_auto%2Ch_840%2Cq_auto%3Agood%2Cw_840%2Fv1563803751%2Fproducts%2Fschefflera-on-lava-c06688.jpg",
+      "stores": [
+        "gb-london",
+        "fr-paris"
+      ],
+      "properties": {
+        "to_price_gb_london": 30,
+        "from_price_fr_paris": 35,
+        "secondary_name_fr_paris": "Schefflera sur son lit de lave",
+        "secondary_name_gb_london": "Schefflera on Lava",
+        "to_price_fr_paris": 35,
+        "from_price_gb_london": 30
+      },
+      "labels": {}
+    },
+    {
+      "@type": "product",
+      "id": "284",
+      "sku": "",
+      "title": "Gaby",
+      "price_raw": 8,
+      "price": "£8",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=284",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fres.cloudinary.com%2Fpatch-gardens%2Fimage%2Fupload%2Fc_fill%2Cf_auto%2Ch_840%2Cq_auto%3Agood%2Cw_840%2Fv1536059237%2Fproducts%2Ftradescantia-sitara-6764f4.jpg",
+      "stores": [
+        "gb-london",
+        "fr-paris"
+      ],
+      "properties": {
+        "to_price_gb_london": 8,
+        "from_price_fr_paris": 7,
+        "secondary_name_fr_paris": "Tradescantia spathacea « Sitara »",
+        "secondary_name_gb_london": "Tradescantia 'sitara'",
+        "to_price_fr_paris": 7,
+        "from_price_gb_london": 8
+      },
+      "labels": {}
+    }
+  ],
+  "visit": {
+    "products": [
+      {
+        "@type": "product",
+        "id": "559",
+        "sku": "",
+        "title": "Val",
+        "price_raw": 6,
+        "price": "£6",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=559",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fres.cloudinary.com%2Fpatch-gardens%2Fimage%2Fupload%2Fc_fill%2Cf_auto%2Ch_840%2Cq_auto%3Agood%2Cw_840%2Fv1578052065%2Fxkjn3twk3xxzjd1fvrej.jpg",
+        "stores": [
+          "gb-london"
+        ],
+        "properties": {
+          "to_price_gb_london": 6,
+          "from_price_gb_london": 6,
+          "secondary_name_gb_london": "Sweetheart plant"
+        },
+        "labels": {}
+      },
+      {
+        "@type": "product",
+        "id": "338",
+        "sku": "",
+        "title": "Bali",
+        "price_raw": 30,
+        "price": "£30",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=338",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fres.cloudinary.com%2Fpatch-gardens%2Fimage%2Fupload%2Fc_fill%2Cf_auto%2Ch_840%2Cq_auto%3Agood%2Cw_840%2Fv1563803751%2Fproducts%2Fschefflera-on-lava-c06688.jpg",
+        "stores": [
+          "gb-london",
+          "fr-paris"
+        ],
+        "properties": {
+          "to_price_gb_london": 30,
+          "from_price_fr_paris": 35,
+          "secondary_name_fr_paris": "Schefflera sur son lit de lave",
+          "secondary_name_gb_london": "Schefflera on Lava",
+          "to_price_fr_paris": 35,
+          "from_price_gb_london": 30
+        },
+        "labels": {}
+      },
+      {
+        "@type": "product",
+        "id": "284",
+        "sku": "",
+        "title": "Gaby",
+        "price_raw": 8,
+        "price": "£8",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=284",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fres.cloudinary.com%2Fpatch-gardens%2Fimage%2Fupload%2Fc_fill%2Cf_auto%2Ch_840%2Cq_auto%3Agood%2Cw_840%2Fv1536059237%2Fproducts%2Ftradescantia-sitara-6764f4.jpg",
+        "stores": [
+          "gb-london",
+          "fr-paris"
+        ],
+        "properties": {
+          "to_price_gb_london": 8,
+          "from_price_fr_paris": 7,
+          "secondary_name_fr_paris": "Tradescantia spathacea « Sitara »",
+          "secondary_name_gb_london": "Tradescantia 'sitara'",
+          "to_price_fr_paris": 7,
+          "from_price_gb_london": 8
+        },
+        "labels": {}
+      }
+    ]
+  },
+  "product": {
+    "@type": "product",
+    "id": "559",
+    "sku": "",
+    "title": "Val",
+    "price_raw": 6,
+    "price": "£6",
+    "currency": "GBP",
+    "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=559",
+    "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fres.cloudinary.com%2Fpatch-gardens%2Fimage%2Fupload%2Fc_fill%2Cf_auto%2Ch_840%2Cq_auto%3Agood%2Cw_840%2Fv1578052065%2Fxkjn3twk3xxzjd1fvrej.jpg",
+    "stores": [
+      "gb-london"
+    ],
+    "properties": {
+      "to_price_gb_london": 6,
+      "from_price_gb_london": 6,
+      "secondary_name_gb_london": "Sweetheart plant"
+    },
+    "labels": {},
+    "price_drop_amount_raw": 20,
+    "price_drop_amount": "£20",
+    "price_drop_currency": "GBP",
+    "price_drop_new_price_raw": 60,
+    "price_drop_new_price": "£60",
+    "price_drop_percentage": 25,
+    "price_drop_previous_price_raw": 80,
+    "price_drop_previous_price": "£80"
+  }
+}

@@ -1,0 +1,1124 @@
+{
+  "unsub": "https://console.ometria.com/misc/unsubscribe.html",
+  "email": {
+    "campaign_identifier": "123:TF:456_202106021442",
+    "campaign_title": "campaign_title",
+    "coupon_code": "XXX123",
+    "to_email_address": "example@example.com",
+    "archive_url": "https://www.ometria.com/",
+    "account_hash": "developer_testing",
+    "preheader": ""
+  },
+  "profile": {
+    "average_order_value": 0,
+    "country": "GB",
+    "date_of_birth": "1980-01-01",
+    "email": "example@example.com",
+    "firstname": "Bob",
+    "gender": null,
+    "lastname": "Jones",
+    "lifecycle_status": "ACTIVE",
+    "marketing_optin": true,
+    "middlename": null,
+    "name": "Bob Jones",
+    "number_of_attempted_orders": 0,
+    "number_of_items_purchased": 0,
+    "number_of_orders": 0,
+    "number_of_visits": 0,
+    "prefix": null,
+    "properties": {
+      "field_name_1": "value_1",
+      "field_name_2": "value_2",
+      "field_name_3": "value_3"
+    },
+    "suffix": null,
+    "total_revenue": 0,
+    "segment_ids": [
+      2,
+      5
+    ],
+    "last_store": null,
+    "home_store": "www.footasylum.com"
+  },
+  "order": {
+    "id": "000001",
+    "currency": "GBP",
+    "products": [
+      {
+        "@type": "product",
+        "id": "4033741",
+        "sku": "40337413",
+        "title": "6 Pack Everyday Cushioned Sock",
+        "price_raw": 16.99,
+        "price": "£16.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4033741",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4033741.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Life Rebooted"
+        },
+        "line_total": "£16.99",
+        "line_total_raw": 16.99,
+        "quantity": 1
+      },
+      {
+        "@type": "product",
+        "id": "4025582",
+        "sku": "40255823",
+        "title": "Club Fleece Pant",
+        "price_raw": 39.99,
+        "price": "£39.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4025582",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4025582.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Streetwear Selects"
+        },
+        "line_total": "£39.99",
+        "line_total_raw": 39.99,
+        "quantity": 1
+      },
+      {
+        "@type": "product",
+        "id": "4030937",
+        "sku": "40309374",
+        "title": "Club Jersey Short",
+        "price_raw": 24.99,
+        "price": "£24.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4030937",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4030937.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Summer Shop AUS"
+        },
+        "line_total": "£24.99",
+        "line_total_raw": 24.99,
+        "quantity": 1
+      },
+      {
+        "@type": "product",
+        "id": "123520",
+        "sku": "1235202",
+        "title": "Womens Chuck Taylor All Star Lift Hi Trainer",
+        "price_raw": 69.99,
+        "price": "£69.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=123520",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F123520.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Women's Post Lockdown Looks"
+        },
+        "line_total": "£69.99",
+        "line_total_raw": 69.99,
+        "quantity": 1
+      },
+      {
+        "@type": "product",
+        "id": "4042994",
+        "sku": "40429943",
+        "title": "Tech Fleece Full Zip Hoodie",
+        "price_raw": 94.99,
+        "price": "£94.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4042994",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4042994.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Chunkz"
+        },
+        "line_total": "£94.99",
+        "line_total_raw": 94.99,
+        "quantity": 1
+      },
+      {
+        "@type": "product",
+        "id": "4030936",
+        "sku": "40309363",
+        "title": "Club Jersey Short",
+        "price_raw": 24.99,
+        "price": "£24.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4030936",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4030936.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Summer Shop AUS"
+        },
+        "line_total": "£24.99",
+        "line_total_raw": 24.99,
+        "quantity": 1
+      },
+      {
+        "@type": "product",
+        "id": "008940",
+        "sku": "00894018",
+        "title": "Air Force 1 Mid Trainer",
+        "price_raw": 94.99,
+        "price": "£94.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=008940",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F008940.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Streetwear Selects"
+        },
+        "line_total": "£94.99",
+        "line_total_raw": 94.99,
+        "quantity": 1
+      },
+      {
+        "@type": "product",
+        "id": "4055822",
+        "sku": "4055822102",
+        "title": "Air Force 1 Low EC21 Trainer",
+        "price_raw": 94.99,
+        "price": "£94.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4055822",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4055822.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Streetwear Selects"
+        },
+        "line_total": "£94.99",
+        "line_total_raw": 94.99,
+        "quantity": 1
+      },
+      {
+        "@type": "product",
+        "id": "4025581",
+        "sku": "40255816",
+        "title": "Club Fleece Pant",
+        "price_raw": 39.99,
+        "price": "£39.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4025581",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4025581.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Locked In"
+        },
+        "line_total": "£39.99",
+        "line_total_raw": 39.99,
+        "quantity": 1
+      },
+      {
+        "@type": "product",
+        "id": "4054088",
+        "sku": "4054088102",
+        "title": "Junior Ozweego Trainer",
+        "price_raw": 64.99,
+        "price": "£64.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4054088",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4054088.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "adidas OZWEEGO"
+        },
+        "line_total": "£64.99",
+        "line_total_raw": 64.99,
+        "quantity": 1
+      }
+    ],
+    "matched_products": [
+      {
+        "@type": "product",
+        "id": "4033741",
+        "sku": "40337413",
+        "title": "6 Pack Everyday Cushioned Sock",
+        "price_raw": 16.99,
+        "price": "£16.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4033741",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4033741.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Life Rebooted"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "4025582",
+        "sku": "40255823",
+        "title": "Club Fleece Pant",
+        "price_raw": 39.99,
+        "price": "£39.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4025582",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4025582.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Streetwear Selects"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "4030937",
+        "sku": "40309374",
+        "title": "Club Jersey Short",
+        "price_raw": 24.99,
+        "price": "£24.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4030937",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4030937.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Summer Shop AUS"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "123520",
+        "sku": "1235202",
+        "title": "Womens Chuck Taylor All Star Lift Hi Trainer",
+        "price_raw": 69.99,
+        "price": "£69.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=123520",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F123520.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Women's Post Lockdown Looks"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "4042994",
+        "sku": "40429943",
+        "title": "Tech Fleece Full Zip Hoodie",
+        "price_raw": 94.99,
+        "price": "£94.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4042994",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4042994.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Chunkz"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "4030936",
+        "sku": "40309363",
+        "title": "Club Jersey Short",
+        "price_raw": 24.99,
+        "price": "£24.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4030936",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4030936.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Summer Shop AUS"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "008940",
+        "sku": "00894018",
+        "title": "Air Force 1 Mid Trainer",
+        "price_raw": 94.99,
+        "price": "£94.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=008940",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F008940.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Streetwear Selects"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "4055822",
+        "sku": "4055822102",
+        "title": "Air Force 1 Low EC21 Trainer",
+        "price_raw": 94.99,
+        "price": "£94.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4055822",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4055822.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Streetwear Selects"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "4025581",
+        "sku": "40255816",
+        "title": "Club Fleece Pant",
+        "price_raw": 39.99,
+        "price": "£39.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4025581",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4025581.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Locked In"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "4054088",
+        "sku": "4054088102",
+        "title": "Junior Ozweego Trainer",
+        "price_raw": 64.99,
+        "price": "£64.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4054088",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4054088.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "adidas OZWEEGO"
+        }
+      }
+    ],
+    "total_raw": 200,
+    "total": "£200",
+    "reorder_url": "http://www.example.com/checkout"
+  },
+  "basket": {
+    "currency": "GBP",
+    "products": [
+      {
+        "@type": "product",
+        "id": "4033741",
+        "sku": "40337413",
+        "title": "6 Pack Everyday Cushioned Sock",
+        "price_raw": 16.99,
+        "price": "£16.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4033741",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4033741.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Life Rebooted"
+        },
+        "line_total": "£16.99",
+        "line_total_raw": 16.99,
+        "quantity": 1
+      },
+      {
+        "@type": "product",
+        "id": "4030937",
+        "sku": "40309374",
+        "title": "Club Jersey Short",
+        "price_raw": 14.99,
+        "price": "£14.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4030937",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4030937.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Summer Shop AUS"
+        },
+        "line_total": "£14.99",
+        "line_total_raw": 14.99,
+        "quantity": 1
+      }
+    ],
+    "matched_products": [
+      {
+        "@type": "product",
+        "id": "4033741",
+        "sku": "40337413",
+        "title": "6 Pack Everyday Cushioned Sock",
+        "price_raw": 16.99,
+        "price": "£16.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4033741",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4033741.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Life Rebooted"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "4025582",
+        "sku": "40255823",
+        "title": "Club Fleece Pant",
+        "price_raw": 39.99,
+        "price": "£39.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4025582",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4025582.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Streetwear Selects"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "4030937",
+        "sku": "40309374",
+        "title": "Club Jersey Short",
+        "price_raw": 24.99,
+        "price": "£24.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4030937",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4030937.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Summer Shop AUS"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "123520",
+        "sku": "1235202",
+        "title": "Womens Chuck Taylor All Star Lift Hi Trainer",
+        "price_raw": 69.99,
+        "price": "£69.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=123520",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F123520.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Women's Post Lockdown Looks"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "4042994",
+        "sku": "40429943",
+        "title": "Tech Fleece Full Zip Hoodie",
+        "price_raw": 94.99,
+        "price": "£94.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4042994",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4042994.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Chunkz"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "4030936",
+        "sku": "40309363",
+        "title": "Club Jersey Short",
+        "price_raw": 24.99,
+        "price": "£24.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4030936",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4030936.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Summer Shop AUS"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "008940",
+        "sku": "00894018",
+        "title": "Air Force 1 Mid Trainer",
+        "price_raw": 94.99,
+        "price": "£94.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=008940",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F008940.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Streetwear Selects"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "4055822",
+        "sku": "4055822102",
+        "title": "Air Force 1 Low EC21 Trainer",
+        "price_raw": 94.99,
+        "price": "£94.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4055822",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4055822.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Streetwear Selects"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "4025581",
+        "sku": "40255816",
+        "title": "Club Fleece Pant",
+        "price_raw": 39.99,
+        "price": "£39.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4025581",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4025581.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Locked In"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "4054088",
+        "sku": "4054088102",
+        "title": "Junior Ozweego Trainer",
+        "price_raw": 64.99,
+        "price": "£64.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4054088",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4054088.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "adidas OZWEEGO"
+        }
+      }
+    ],
+    "total_raw": 31.98,
+    "total": "£31.98",
+    "url": "http://www.example.com/basket"
+  },
+  "recommended_products": [
+    {
+      "@type": "product",
+      "id": "4033741",
+      "sku": "40337413",
+      "title": "6 Pack Everyday Cushioned Sock",
+      "price_raw": 16.99,
+      "price": "£16.99",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4033741",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4033741.jpg",
+      "stores": [],
+      "properties": {},
+      "labels": {
+        "category": "Life Rebooted"
+      }
+    },
+    {
+      "@type": "product",
+      "id": "4025582",
+      "sku": "40255823",
+      "title": "Club Fleece Pant",
+      "price_raw": 39.99,
+      "price": "£39.99",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4025582",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4025582.jpg",
+      "stores": [],
+      "properties": {},
+      "labels": {
+        "category": "Streetwear Selects"
+      }
+    },
+    {
+      "@type": "product",
+      "id": "4030937",
+      "sku": "40309374",
+      "title": "Club Jersey Short",
+      "price_raw": 24.99,
+      "price": "£24.99",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4030937",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4030937.jpg",
+      "stores": [],
+      "properties": {},
+      "labels": {
+        "category": "Summer Shop AUS"
+      }
+    },
+    {
+      "@type": "product",
+      "id": "123520",
+      "sku": "1235202",
+      "title": "Womens Chuck Taylor All Star Lift Hi Trainer",
+      "price_raw": 69.99,
+      "price": "£69.99",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=123520",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F123520.jpg",
+      "stores": [],
+      "properties": {},
+      "labels": {
+        "category": "Women's Post Lockdown Looks"
+      }
+    },
+    {
+      "@type": "product",
+      "id": "4042994",
+      "sku": "40429943",
+      "title": "Tech Fleece Full Zip Hoodie",
+      "price_raw": 94.99,
+      "price": "£94.99",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4042994",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4042994.jpg",
+      "stores": [],
+      "properties": {},
+      "labels": {
+        "category": "Chunkz"
+      }
+    },
+    {
+      "@type": "product",
+      "id": "4030936",
+      "sku": "40309363",
+      "title": "Club Jersey Short",
+      "price_raw": 24.99,
+      "price": "£24.99",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4030936",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4030936.jpg",
+      "stores": [],
+      "properties": {},
+      "labels": {
+        "category": "Summer Shop AUS"
+      }
+    },
+    {
+      "@type": "product",
+      "id": "008940",
+      "sku": "00894018",
+      "title": "Air Force 1 Mid Trainer",
+      "price_raw": 94.99,
+      "price": "£94.99",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=008940",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F008940.jpg",
+      "stores": [],
+      "properties": {},
+      "labels": {
+        "category": "Streetwear Selects"
+      }
+    },
+    {
+      "@type": "product",
+      "id": "4055822",
+      "sku": "4055822102",
+      "title": "Air Force 1 Low EC21 Trainer",
+      "price_raw": 94.99,
+      "price": "£94.99",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4055822",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4055822.jpg",
+      "stores": [],
+      "properties": {},
+      "labels": {
+        "category": "Streetwear Selects"
+      }
+    },
+    {
+      "@type": "product",
+      "id": "4025581",
+      "sku": "40255816",
+      "title": "Club Fleece Pant",
+      "price_raw": 39.99,
+      "price": "£39.99",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4025581",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4025581.jpg",
+      "stores": [],
+      "properties": {},
+      "labels": {
+        "category": "Locked In"
+      }
+    },
+    {
+      "@type": "product",
+      "id": "4054088",
+      "sku": "4054088102",
+      "title": "Junior Ozweego Trainer",
+      "price_raw": 64.99,
+      "price": "£64.99",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4054088",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4054088.jpg",
+      "stores": [],
+      "properties": {},
+      "labels": {
+        "category": "adidas OZWEEGO"
+      }
+    }
+  ],
+  "products": [
+    {
+      "@type": "product",
+      "id": "4033741",
+      "sku": "40337413",
+      "title": "6 Pack Everyday Cushioned Sock",
+      "price_raw": 16.99,
+      "price": "£16.99",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4033741",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4033741.jpg",
+      "stores": [],
+      "properties": {},
+      "labels": {
+        "category": "Life Rebooted"
+      }
+    },
+    {
+      "@type": "product",
+      "id": "4025582",
+      "sku": "40255823",
+      "title": "Club Fleece Pant",
+      "price_raw": 39.99,
+      "price": "£39.99",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4025582",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4025582.jpg",
+      "stores": [],
+      "properties": {},
+      "labels": {
+        "category": "Streetwear Selects"
+      }
+    },
+    {
+      "@type": "product",
+      "id": "4030937",
+      "sku": "40309374",
+      "title": "Club Jersey Short",
+      "price_raw": 24.99,
+      "price": "£24.99",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4030937",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4030937.jpg",
+      "stores": [],
+      "properties": {},
+      "labels": {
+        "category": "Summer Shop AUS"
+      }
+    },
+    {
+      "@type": "product",
+      "id": "123520",
+      "sku": "1235202",
+      "title": "Womens Chuck Taylor All Star Lift Hi Trainer",
+      "price_raw": 69.99,
+      "price": "£69.99",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=123520",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F123520.jpg",
+      "stores": [],
+      "properties": {},
+      "labels": {
+        "category": "Women's Post Lockdown Looks"
+      }
+    },
+    {
+      "@type": "product",
+      "id": "4042994",
+      "sku": "40429943",
+      "title": "Tech Fleece Full Zip Hoodie",
+      "price_raw": 94.99,
+      "price": "£94.99",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4042994",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4042994.jpg",
+      "stores": [],
+      "properties": {},
+      "labels": {
+        "category": "Chunkz"
+      }
+    },
+    {
+      "@type": "product",
+      "id": "4030936",
+      "sku": "40309363",
+      "title": "Club Jersey Short",
+      "price_raw": 24.99,
+      "price": "£24.99",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4030936",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4030936.jpg",
+      "stores": [],
+      "properties": {},
+      "labels": {
+        "category": "Summer Shop AUS"
+      }
+    },
+    {
+      "@type": "product",
+      "id": "008940",
+      "sku": "00894018",
+      "title": "Air Force 1 Mid Trainer",
+      "price_raw": 94.99,
+      "price": "£94.99",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=008940",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F008940.jpg",
+      "stores": [],
+      "properties": {},
+      "labels": {
+        "category": "Streetwear Selects"
+      }
+    },
+    {
+      "@type": "product",
+      "id": "4055822",
+      "sku": "4055822102",
+      "title": "Air Force 1 Low EC21 Trainer",
+      "price_raw": 94.99,
+      "price": "£94.99",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4055822",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4055822.jpg",
+      "stores": [],
+      "properties": {},
+      "labels": {
+        "category": "Streetwear Selects"
+      }
+    },
+    {
+      "@type": "product",
+      "id": "4025581",
+      "sku": "40255816",
+      "title": "Club Fleece Pant",
+      "price_raw": 39.99,
+      "price": "£39.99",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4025581",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4025581.jpg",
+      "stores": [],
+      "properties": {},
+      "labels": {
+        "category": "Locked In"
+      }
+    },
+    {
+      "@type": "product",
+      "id": "4054088",
+      "sku": "4054088102",
+      "title": "Junior Ozweego Trainer",
+      "price_raw": 64.99,
+      "price": "£64.99",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4054088",
+      "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4054088.jpg",
+      "stores": [],
+      "properties": {},
+      "labels": {
+        "category": "adidas OZWEEGO"
+      }
+    }
+  ],
+  "visit": {
+    "products": [
+      {
+        "@type": "product",
+        "id": "4033741",
+        "sku": "40337413",
+        "title": "6 Pack Everyday Cushioned Sock",
+        "price_raw": 16.99,
+        "price": "£16.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4033741",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4033741.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Life Rebooted"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "4025582",
+        "sku": "40255823",
+        "title": "Club Fleece Pant",
+        "price_raw": 39.99,
+        "price": "£39.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4025582",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4025582.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Streetwear Selects"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "4030937",
+        "sku": "40309374",
+        "title": "Club Jersey Short",
+        "price_raw": 24.99,
+        "price": "£24.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4030937",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4030937.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Summer Shop AUS"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "123520",
+        "sku": "1235202",
+        "title": "Womens Chuck Taylor All Star Lift Hi Trainer",
+        "price_raw": 69.99,
+        "price": "£69.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=123520",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F123520.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Women's Post Lockdown Looks"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "4042994",
+        "sku": "40429943",
+        "title": "Tech Fleece Full Zip Hoodie",
+        "price_raw": 94.99,
+        "price": "£94.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4042994",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4042994.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Chunkz"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "4030936",
+        "sku": "40309363",
+        "title": "Club Jersey Short",
+        "price_raw": 24.99,
+        "price": "£24.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4030936",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4030936.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Summer Shop AUS"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "008940",
+        "sku": "00894018",
+        "title": "Air Force 1 Mid Trainer",
+        "price_raw": 94.99,
+        "price": "£94.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=008940",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F008940.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Streetwear Selects"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "4055822",
+        "sku": "4055822102",
+        "title": "Air Force 1 Low EC21 Trainer",
+        "price_raw": 94.99,
+        "price": "£94.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4055822",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4055822.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Streetwear Selects"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "4025581",
+        "sku": "40255816",
+        "title": "Club Fleece Pant",
+        "price_raw": 39.99,
+        "price": "£39.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4025581",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4025581.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "Locked In"
+        }
+      },
+      {
+        "@type": "product",
+        "id": "4054088",
+        "sku": "4054088102",
+        "title": "Junior Ozweego Trainer",
+        "price_raw": 64.99,
+        "price": "£64.99",
+        "currency": "GBP",
+        "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4054088",
+        "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4054088.jpg",
+        "stores": [],
+        "properties": {},
+        "labels": {
+          "category": "adidas OZWEEGO"
+        }
+      }
+    ]
+  },
+  "product": {
+    "@type": "product",
+    "id": "4033741",
+    "sku": "40337413",
+    "title": "6 Pack Everyday Cushioned Sock",
+    "price_raw": 16.99,
+    "price": "£16.99",
+    "currency": "GBP",
+    "url": "https://api.ometria.com/trk/click?acc=f94e6ac49800d8e0&product=4033741",
+    "image_url": "https://d1kxx6lk0ihrs.cloudfront.net/tmb.php?default_size=800x800&mode=bestfit&url=https%3A%2F%2Fwww.footasylum.com%2Fimages%2Fproducts%2Fmedium%2F4033741.jpg",
+    "stores": [],
+    "properties": {},
+    "labels": {
+      "category": "Life Rebooted"
+    },
+    "price_drop_amount_raw": 20,
+    "price_drop_amount": "£20",
+    "price_drop_currency": "GBP",
+    "price_drop_new_price_raw": 60,
+    "price_drop_new_price": "£60",
+    "price_drop_percentage": 25,
+    "price_drop_previous_price_raw": 80,
+    "price_drop_previous_price": "£80"
+  }
+}

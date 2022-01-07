@@ -1,0 +1,601 @@
+{% from 'macros.html' import list_checkbox_macro, list_radio_macro, flash_messages with context %}
+
+<!-- Rhone - Profile -->
+
+<style type="text/css">
+* {
+font-family: 'Gibson', sans-serif;
+}
+body {
+background:#EEEEEE;
+color:#000000;
+}
+h1, h2, p, a {
+margin: 0;
+padding: 0;
+}
+h1 {
+display: block;
+font-size: 26px;
+font-weight: 500;
+line-height: 1.3;
+text-align: center;
+color: #000000;
+}
+h2 {
+display: block;
+font-size: 20px;
+font-weight: 500;
+line-height: 1.3;
+text-align: center;
+color: #000000;
+}
+p {
+font-size: 16px;
+font-weight: 400;
+line-height: 1.5;
+text-align: left;
+color: #000000;
+}
+label {
+display:block !important;
+margin-left: -3px;
+color: #000000;
+font-size: 16px;
+line-height: 1.3;
+font-weight: 400;
+padding-bottom: 0;
+}
+hr {
+display: block;
+height: 1px;
+border: 0;
+border-top: 1px solid #000000;
+margin: 0 auto;
+padding: 0;
+width: 90%;
+}
+a {
+color: #000000;
+text-decoration: underline;
+}
+a:hover {
+color: #333333;
+text-decoration: none;
+}
+.container {
+padding: 0;
+max-width: 600px;
+}
+.alert-success {
+background-color: #ffffff;
+color: #000000;
+font-family: 'Gibson', sans-serif;
+border:1px solid #000000;
+}
+.btn {
+color: #FFFFFF;
+background-color: #000000;
+border-color: #000000;
+border-radius: 0px;
+font-family: 'Gibson', sans-serif;
+font-size: 12px;
+font-weight: 600;
+letter-spacing: 4px;
+padding: 16px 30px !important;
+text-transform: uppercase;
+text-decoration: none;
+}
+.btn:hover, .btn:focus {
+color: #FFFFFF !important;
+background-color: #333333 !important;
+transition: 0.2s ease-in-out;
+}
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+margin-left: -25px;
+width: 12px;
+height: 12px;
+}
+.checkbox label, .radio label {
+padding-left: 25px;
+}
+input[type='radio']:after {
+width: 14px;
+height: 14px;
+border-radius: 14px;
+top: -2px;
+left: 0px;
+position: relative;
+background-color: #FFFFFF;
+content: '';
+display: inline-block;
+visibility: visible;
+border: 1px solid #000000;
+}
+input[type='radio']:checked:after {
+width: 14px;
+height: 14px;
+border-radius: 14px;
+top: -2px;
+left: 0px;
+position: relative;
+background-color: #000000;
+content: '';
+display: inline-block;
+visibility: visible;
+box-shadow: inset 0px 0px 0px 2px #FFFFFF;
+border: 1px solid #000000;
+}
+input[type='checkbox']:after {
+width: 14px;
+height: 14px;
+border-radius: 0px;
+top: -2px;
+left: 0px;
+position: relative;
+background-color: #FFFFFF;
+content: '';
+display: inline-block;
+visibility: visible;
+border: 1px solid #000000;
+}
+input[type='checkbox']:checked:after {
+width: 14px;
+height: 14px;
+border-radius: 0px;
+top: -2px;
+left: 0px;
+position: relative;
+background-color: #000000;
+content: '';
+display: inline-block;
+visibility: visible;
+box-shadow: inset 0px 0px 0px 2px #FFFFFF;
+border: 1px solid #000000;
+}
+.form-horizontal .radio,
+.form-horizontal .checkbox {
+padding-top: 5px;
+padding-bottom: 5px;
+}
+.flash {
+padding: 0 20px;
+}
+.logo {
+padding: 40px 0 20px 0;
+}
+.banner {
+margin: 0 auto;
+padding: 0;
+}
+.section {
+background-color: #FFFFFF;
+padding: 40px;
+}
+.section .options {
+padding: 10px 0 20px 0;
+}
+.section .button {
+padding: 20px 0;
+text-align: center;
+}
+.section h1 {
+padding-bottom: 10px;
+text-align: center;
+}
+.section h2 {
+padding-bottom: 10px;
+text-align: center;
+}
+.section p {
+text-align: left;
+padding-bottom: 0px;
+}
+.section label {
+text-align: left;
+margin: 0;
+}
+.footer {
+background-color: #FFFFFF;
+padding: 20px;
+}
+.footer p {
+font-size: 14px;
+text-align: center;
+padding-bottom: 6px;
+}
+@media only screen and (max-width:599px) {
+.section {
+padding: 20px;
+}
+.footer {
+padding: 20px;
+}
+}
+@media only screen and (max-width:339px) {
+.section {
+padding: 10px;
+}
+.footer {
+padding: 10px;
+}
+}
+@supports (-webkit-touch-callout: none) {
+input[type='radio']:after, input[type='radio']:checked:after {
+top: -4px;
+left: -2px;
+}
+input[type='checkbox']:after, input[type='checkbox']:checked:after {
+top: -4px;
+left: -2px;
+}
+}
+</style>
+
+<style type="text/css">
+  @font-face {
+  font-family: 'Gibson';
+  src: url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Regular-83b6f53964.eot');
+  src: url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Regular-83b6f53964.eot?#iefix') format('embedded-opentype'),
+       url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Regular-0218a70f06.woff') format('woff'),
+       url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Regular-57f50e233a.woff2') format('woff2'),
+       url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Regular-03e103f694.ttf') format('truetype'),
+       url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Regular-4324ffe5da.svg') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  }
+  @font-face {
+  font-family: 'Gibson';
+  src: url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Medium-4beb57ce32.eot');
+  src: url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Medium-4beb57ce32.eot?#iefix') format('embedded-opentype'),
+       url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Medium-e4017aae5d.woff') format('woff'),
+       url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Medium-ed6ee483c0.woff2') format('woff2'),
+       url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Medium-de42c05374.ttf') format('truetype'),
+       url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Medium-899c1081f1.svg') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  }
+  @font-face {
+  font-family: 'Gibson';
+  src: url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-SemiBold-0e6b413a6a.eot');
+  src: url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-SemiBold-0e6b413a6a.eot?#iefix') format('embedded-opentype'),
+       url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-SemiBold-0a8c75d728.woff') format('woff'),
+       url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-SemiBold-86adfd4a2a.woff2') format('woff2'),
+       url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-SemiBold-5b6731bcae.ttf') format('truetype'),
+       url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-SemiBold-f6695b0167.svg') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  }
+  /*
+  @font-face {
+  font-family: 'Gibson';
+  src: url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Bold-3553781778.eot');
+  src: url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Bold-3553781778.eot?#iefix') format('embedded-opentype'),
+       url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Bold-9ed48ab534.woff') format('woff'),
+       url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Bold-bb29b3d078.woff2') format('woff2'),
+       url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Bold-f757368551.ttf') format('truetype'),
+       url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Bold-b640d6d14d.svg') format('svg');
+  font-weight: 700;
+  font-style: normal;
+  }
+  @font-face {
+  font-family: 'Gibson';
+  src: url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Heavy-37e9f5b6bd.eot');
+  src: url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Heavy-37e9f5b6bd.eot?#iefix') format('embedded-opentype'),
+       url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Heavy-01672a6c46.woff') format('woff'),
+       url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Heavy-df42b278cc.woff2') format('woff2'),
+       url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Heavy-51853eb097.ttf') format('truetype'),
+       url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/rhone/assets/fonts/Gibson-Heavy-69282c9f2b.svg') format('svg');
+  font-weight: 900;
+  font-style: normal;
+  }
+  */
+</style>
+
+<link rel="stylesheet" href="https://use.typekit.net/mhe5pbp.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script>
+$(document).ready(function(){
+
+var all_subscription = $('.all-subscription input[type=checkbox]');
+$('#submitbtn').on('click',function () {
+if (all_subscription.is(':checked')) {
+$( ".lauch-checkbox label input" ).prop( "checked", true );
+$(".lauch-checkbox label input").attr("disabled", false);
+$( ".highlight-checkbox label input" ).prop( "checked", true );
+$(".highlight-checkbox label input").attr("disabled", false);
+$( ".promo-checkbox label input" ).prop( "checked", true );
+$(".promo-checkbox label input").attr("disabled", false);
+$( ".newsletter-checkbox label input" ).prop( "checked", true );
+$(".newsletter-checkbox label input").attr("disabled", false);
+}
+});
+$('.all-subscription input[type=checkbox]').on('click',function () {
+if (all_subscription.is(':checked')) {
+$( ".lauch-checkbox label input" ).prop( "checked", true );
+$(".lauch-checkbox label input").attr("disabled", true);
+$( ".highlight-checkbox label input" ).prop( "checked", true );
+$(".highlight-checkbox label input").attr("disabled", true);
+$( ".promo-checkbox label input" ).prop( "checked", true );
+$(".promo-checkbox label input").attr("disabled", true);
+$( ".newsletter-checkbox label input" ).prop( "checked", true );
+$(".newsletter-checkbox label input").attr("disabled", true);
+} else {
+$( ".lauch-checkbox label input" ).prop( "checked", false );
+$(".lauch-checkbox label input").attr("disabled", false);
+$( ".highlight-checkbox label input" ).prop( "checked", false );
+$(".highlight-checkbox label input").attr("disabled", false);
+$( ".promo-checkbox label input" ).prop( "checked", false );
+$(".promo-checkbox label input").attr("disabled", false);
+$( ".newsletter-checkbox label input" ).prop( "checked", false );
+$(".newsletter-checkbox label input").attr("disabled", false);
+}
+});
+
+var all_topics = $('.all-topics input[type=checkbox]');
+$('#submitbtn').on('click',function () {
+if (all_topics.is(':checked')) {
+$( ".progress-checkbox label input" ).prop( "checked", true );
+$(".progress-checkbox label input").attr("disabled", false);
+$( ".performance-checkbox label input" ).prop( "checked", true );
+$(".performance-checkbox label input").attr("disabled", false);
+$( ".wellness-checkbox label input" ).prop( "checked", true );
+$(".wellness-checkbox label input").attr("disabled", false);
+}
+});
+$('.all-topics input[type=checkbox]').on('click',function () {
+if (all_topics.is(':checked')) {
+$( ".progress-checkbox label input" ).prop( "checked", true );
+$(".progress-checkbox label input").attr("disabled", true);
+$( ".performance-checkbox label input" ).prop( "checked", true );
+$(".performance-checkbox label input").attr("disabled", true);
+$( ".wellness-checkbox label input" ).prop( "checked", true );
+$(".wellness-checkbox label input").attr("disabled", true);
+} else {
+$( ".progress-checkbox label input" ).prop( "checked", false );
+$(".progress-checkbox label input").attr("disabled", false);
+$( ".performance-checkbox label input" ).prop( "checked", false );
+$(".performance-checkbox label input").attr("disabled", false);
+$( ".wellness-checkbox label input" ).prop( "checked", false );
+$(".wellness-checkbox label input").attr("disabled", false);
+}
+});
+
+if($(".alert.alert-success").is(":visible")){
+$('.success').hide();
+} else {
+$('.success').show();
+}
+
+$("input[type='radio']").change(function(){
+if($(this).val()=="other"){
+$("#otherAnswer").show();
+} else {
+$("#otherAnswer").hide();
+}
+});
+});
+</script>
+<div class='container'>
+  <div class="logo">
+    <a href="https://www.rhone.com/">
+      <img alt="Rhone" src="
+      https://cdn-ometria-com.s3-eu-west-1.amazonaws.com/emails/349bacf8ad172254/5b6c20319a555821b89fd4a1a0687bb5.png" style="display: block; width: 128px; height: auto; padding:0; border: none; margin: 0 auto;" />
+    </a>
+  </div>
+  <div class="banner">
+    <a href="https://www.rhone.com/" target="_blank">
+      <img alt="Rhone" src="
+      https://cdn-ometria-com.s3-eu-west-1.amazonaws.com/emails/349bacf8ad172254/447a204fbf9daf6eee99208e9049a648.jpg" style="display: block; width: 100%; height: auto; padding:0; border: none; margin: 0 auto;" />
+    </a>
+  </div>
+  <form action="" class="form-horizontal" method="post">
+    <div class="flash">
+      {{ flash_messages() }}
+    </div>
+    <div class="success">
+      <div class="section">
+        <h1>Email Communication Preferences</h1>
+        <p style="text-align: center;">We want to get to know you better!</p>
+        <div style="padding-bottom: 10px; width: 100%;"></div>
+        {% if profile.email %} <p style="text-align: center;">Your email address on record is <a href="mailto:{{ profile.email }}">{{ profile.email }}</a></p> {% endif %}
+        <div style="padding-bottom: 20px; width: 100%;"></div>
+        <div class="options">
+          <div class="row">
+            <div class="col-xs-6">
+              <p>Gender</p>
+              <div class="radio">
+                <label><input type='radio' name='gender' id="male" value='m' /> Male </label>
+              </div>
+              <div class="radio">
+                <label><input type='radio' name='gender' id="female" value='f' /> Female </label>
+              </div>
+              <div class="radio">
+                <label><input type='radio' name='gender' id="unknown" value='unknown' /> I'd prefer not to say </label>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <p>Date of Birth</p>
+              <input class="form-control" name="date_of_birth" type='date' value="{{ profile.date_of_birth }}" />
+            </div>
+          </div>
+        </div>
+        <!--
+        <div class="button">
+          <input class="btn" name="action:update" type="submit" value="Update Information" />
+        </div>
+        -->
+      </div>
+      <hr>
+      <div class="section">
+        <p>Subscribe me to (Select all that apply):</p>
+        <div class="options">
+          <div class="checkbox">
+            <div class="all-subscription">
+              {{ list_checkbox_macro('All Emails - I&rsquo;d love to receive all regular emails and articles.', 6533, ) }}
+            </div>
+          </div> <!-- all emails = 6533 -->
+          <div class="checkbox">
+            <div class="lauch-checkbox">
+              {{ list_checkbox_macro('Product Launch - Get fresh new gear and be in the know of any product launches.', 3029, ) }}
+            </div>
+          </div>
+          <div class="checkbox">
+            <div class="highlight-checkbox">
+              {{ list_checkbox_macro('Product Highlight - Stay updated on any new features, colors, or stock updates on core products that are currently in production.', 3030, ) }}
+            </div>
+          </div>
+          <div class="checkbox">
+            <div class="promo-checkbox">
+              {{ list_checkbox_macro('Sales \u0026 Promotions - Don&rsquo;t miss the special deals that come during holidays or any time we feel we want to.', 3032, ) }}
+            </div>
+          </div>
+          <div class="checkbox">
+            <div class="newsletter-checkbox">
+              {{ list_checkbox_macro('Newsletter - Escape your routine with articles from our lifestyle \u0026 adventure blog, The Pursuit.', 3031, ) }}
+            </div>
+          </div>
+        </div>
+        <!--
+        <div>
+          <div class="button">
+            <input class="btn" name="action:update" type="submit" value="Update Subscriptions" />
+          </div>
+        </div>
+        -->
+      </div>
+      <hr>
+      <div class="section">
+        <p>What activities do you enjoy? (Select all that apply):</p>
+        <div class="options">
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="checkbox">
+                <div class="">
+                  {{ list_checkbox_macro('Running/Jogging.', 6506, ) }}
+                </div>
+              </div>
+              <div class="checkbox">
+                <div class="">
+                  {{ list_checkbox_macro('Weightlifting.', 6515, ) }}
+                </div>
+              </div>
+              <div class="checkbox">
+                <div class="">
+                  {{ list_checkbox_macro('Yoga.', 6516, ) }}
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="checkbox">
+                <div class="">
+                  {{ list_checkbox_macro('Hiking.', 6517, ) }}
+                </div>
+              </div>
+              <div class="checkbox">
+                <div class="">
+                  {{ list_checkbox_macro('Swimming.', 6518, ) }}
+                </div>
+              </div>
+              <div class="checkbox">
+                <div class="">
+                  {{ list_checkbox_macro('Other.', 6519, ) }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--
+        <div>
+          <div class="button">
+            <input class="btn" name="action:update" type="submit" value="Update Information" />
+          </div>
+        </div>
+        -->
+      </div>
+      <hr>
+      <div class="section">
+        <p>Which Rhone products are you interested in? (Select all that apply):</p>
+        <div class="options">
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="checkbox">
+                <div class="">
+                  {{ list_checkbox_macro('Activewear.', 6520, ) }}
+                </div>
+              </div>
+              <div class="checkbox">
+                <div class="">
+                  {{ list_checkbox_macro('Casual Clothing.', 6521, ) }}
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="checkbox">
+                <div class="">
+                  {{ list_checkbox_macro('Business Casual Wear.', 6522, ) }}
+                </div>
+              </div>
+              <div class="checkbox">
+                <div class="">
+                  {{ list_checkbox_macro('Professional Formal Wear.', 6523, ) }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--
+        <div>
+          <div class="button">
+            <input class="btn" name="action:update" type="submit" value="Update Information" />
+          </div>
+        </div>
+        -->
+      </div>
+      <hr>
+      <div class="section">
+        <p>Rhone covers a range of topics. Which of the following are you interested in? (Select all that apply):</p>
+        <div class="options">
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="checkbox">
+                <div class="progress-checkbox">
+                  {{ list_checkbox_macro('Progress.', 6524, ) }}
+                </div>
+              </div>
+              <div class="checkbox">
+                <div class="performance-checkbox">
+                  {{ list_checkbox_macro('Performance.', 6524, ) }}
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="checkbox">
+                <div class="wellness-checkbox">
+                  {{ list_checkbox_macro('Wellness.', 6526, ) }}
+                </div>
+              </div>
+              <div class="checkbox">
+                <div class="all-topics">
+                  {{ list_checkbox_macro('All of It!', 6527, ) }}
+                </div>
+              </div> <!-- all of it = 6527 -->
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="button">
+            <input class="btn" name="action:update" type="submit" value="Update Preferences" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div class="footer">
+    <p>No spam ever. Your email address will only ever be used for what you sign up to receive. We will not sell or distribute your personal information. If you would like to stop receiving emails, please <a href="{{ url_for('preferences_centre_view', account_hash=account.hash, profile_hash=profile.hash, route='unsubscribe', **request.args)}}">unsubscribe here</a>. View our <a href="https://www.rhone.com/pages/privacy-policy">Privacy Policy here</a>.</p>
+  </div>
+</div>

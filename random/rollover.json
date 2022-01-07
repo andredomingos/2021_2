@@ -1,0 +1,115 @@
+{
+  "unsub": "https://console.ometria.com/misc/unsubscribe.html",
+  "email": {
+    "campaign_identifier": "123:ME:456_202102241730",
+    "campaign_title": "campaign_title",
+    "to_email_address": "example@example.com",
+    "subject": "Check out this amazing email",
+    "archive_url": "https://www.ometria.com/",
+    "preheader": "Preheader goes here",
+    "account_hash": "developer_testing",
+    "variant_identifier": "variant_A"
+  },
+  "profile": {
+    "firstname": "Bob",
+    "middlename": null,
+    "lastname": "Jones",
+    "name": "Bob Jones",
+    "email": "example@example.com",
+    "gender": null,
+    "prefix": null,
+    "suffix": null,
+    "country": "GB",
+    "date_of_birth": "1980-01-01",
+    "total_revenue": 0,
+    "marketing_optin": true,
+    "lifecycle_status": "ACTIVE",
+    "number_of_orders": 0,
+    "number_of_attempted_orders": 0,
+    "number_of_visits": 0,
+    "average_order_value": 0,
+    "number_of_items_purchased": 0,
+    "properties": {
+      "field_name_1": "value_1",
+      "field_name_2": "value_2",
+      "field_name_3": "value_3"
+    },
+    "segment_ids": [],
+    "last_store": null,
+    "home_store": "fr-paris"
+  },
+  "products": [
+    {
+      "@type": "product",
+      "id": "559",
+      "sku": "",
+      "title": "Val",
+      "price_raw": 6,
+      "price": "£6",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=559",
+      "image_url": "https://dummyimage.com/500x300/000000/FFFFFF&text=slide1",
+      "stores": [
+        "gb-london"
+      ],
+      "properties": {
+        "to_price_gb_london": 6,
+        "from_price_gb_london": 6,
+        "image_urlNew": "https://dummyimage.com/500x300/FFFFFF/000000&text=slide2",
+        "secondary_name_gb_london": "Sweetheart plant"
+      },
+      "labels": {}
+    },
+    {
+      "@type": "product",
+      "id": "338",
+      "sku": "",
+      "title": "Bali",
+      "price_raw": 30,
+      "price": "£30",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=338",
+      "image_url": "https://dummyimage.com/500x300/000000/FFFFFF&text=slide1",
+      "stores": [
+        "gb-london",
+        "fr-paris"
+      ],
+      "properties": {
+        "to_price_gb_london": 30,
+        "from_price_fr_paris": 35,
+        "secondary_name_fr_paris": "Schefflera sur son lit de lave",
+        "secondary_name_gb_london": "Schefflera on Lava",
+        "to_price_fr_paris": 35,
+        "image_urlNew": "https://dummyimage.com/500x300/FFFFFF/000000&text=slide2",
+        "from_price_gb_london": 30
+      },
+      "labels": {}
+    },
+    {
+      "@type": "product",
+      "id": "284",
+      "sku": "",
+      "title": "Gaby",
+      "price_raw": 8,
+      "price": "£8",
+      "currency": "GBP",
+      "url": "https://api.ometria.com/trk/click?acc=bd4c4a09e435d91b&product=284",
+      "image_url": "https://dummyimage.com/500x300/000000/FFFFFF&text=slide1",
+      
+      "stores": [
+        "gb-london",
+        "fr-paris"
+      ],
+      "properties": {
+        "to_price_gb_london": 8,
+        "from_price_fr_paris": 7,
+        "secondary_name_fr_paris": "Tradescantia spathacea « Sitara »",
+        "secondary_name_gb_london": "Tradescantia 'sitara'",
+        "to_price_fr_paris": 7,
+        "from_price_gb_london": 8,
+        "image_urlNew": "https://dummyimage.com/500x300/FFFFFF/000000&text=slide2"
+      },
+      "labels": {}
+    }
+  ]
+}

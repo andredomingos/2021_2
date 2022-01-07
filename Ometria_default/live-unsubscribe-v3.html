@@ -1,0 +1,211 @@
+{% from 'macros.html' import append_phone_number_macro_resources, phone_number_macro, sms_checkbox_macro, list_checkbox_macro, list_radio_macro, flash_messages with context %}
+<!-- Monsoon / Unsubscribe -->
+<style type="text/css">
+th, td, ol, ul, li, h1, h2, h3, h4, h5, h6, p, a {margin:0; padding:0; color:#000001; font-family:Helvetica, Arial, sans-serif;}
+h1, h2, h3, h4, h5, h6 {border:none; display:block;}
+h1 {font-size:26px; line-height:120%; letter-spacing:0px; font-weight:bold;}
+h2 {font-size:20px; line-height:120%; letter-spacing:0px; font-weight:bold;}
+h3 {font-size:18px; line-height:120%; letter-spacing:0px; font-weight:bold;}
+h4 {font-size:16px; line-height:120%; letter-spacing:0px; font-weight:bold;}
+h5 {font-size:15px; line-height:120%; letter-spacing:0px; font-weight:bold;}
+h6 {font-size:14px; line-height:120%; letter-spacing:0px; font-weight:bold;}
+p {font-size:14px; line-height:140%; letter-spacing:0px; font-weight:normal;}
+li {font-size:14px; line-height:140%; letter-spacing:0px; font-weight:normal;}
+.rich span {line-height:120%;}
+ol, ul {list-style-position:inside;}
+strong {font-weight:bold;}
+.Arial, .Arial a {font-family:Arial, sans-serif;}
+.Helvetica, .Helvetica a {font-family:Helvetica, sans-serif;}
+.Verdana, .Verdana a {font-family:Verdana, Arial, sans-serif;}
+label {font-size: 14px; line-height: 140%; letter-spacing: 0px; font-weight: normal;}
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #000001; margin: 0 auto; padding: 0; width: 90%;}
+.alert-success {background-color:#6FB8E2; border:1px solid #6FB8E2; color:#FFFFFF; font-weight:bold;}
+.flash {padding: 0;}
+.container {padding: 0; max-width: 600px;}
+.logo {padding: 40px 20px 20px 20px; background-color:#FFFFFF;}
+.banner {margin: 0 auto; padding: 0;}
+.intro {padding: 10px 20px;}
+.button a {text-decoration: none;}
+.btn {color: #000001; background-color: #f1f1f1; border-color: #000001; border-radius: 0; font-size: 14px; padding: 8px 16px;}
+.btn:hover, .btn:focus {color: #ffffff !important; background-color: #000001 !important; border-color: #000001 !important; opacity: 0.9 !important; transition: 0.2s ease-in-out;}
+.btn-primary {color: #ffffff; background-color: #000001; border-color: #000001; border-radius: 0;}
+.btn-primary:hover, .btn-primary:focus {color: #ffffff !important; background-color: #000001 !important; border-color: #000001 !important; opacity: 0.9 !important; transition: 0.2s ease-in-out;}
+.section {padding: 20px 40px;}
+.section .options {padding: 10px 0;}
+.section .button {padding: 10px 0 10px 0; text-align: center; display: inline-block;}
+.section .footer {padding: 10px 0 40px 0} .section .footer p {font-size: 11px; text-align: center; color:#666666;}
+.section h1 {padding-bottom: 10px; text-align: center;}
+.section h2 {padding-bottom: 10px; text-align: center;}
+.section p {text-align: left; padding-bottom: 0px;}
+.section label {text-align: left; margin: 0 0 2px 0;}
+label {display:block !important; margin-left: -3px; padding-bottom: 0;}
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {margin-left: -25px; width: 12px; height: 12px;}
+.checkbox label, .radio label {padding-left: 25px; min-height: 20px; padding-top: 0l padding-bottom: 0;}
+input[type='radio']:after {width: 14px; height: 14px; border-radius: 14px; top: -2px; left: 0px; position: relative; background-color: #FFFFFF; content: ''; display: inline-block; visibility: visible; border: 1px solid #000001;}
+input[type='radio']:checked:after {width: 14px; height: 14px; border-radius: 14px; top: -2px; left: 0px; position: relative; background-color: #000001; content: ''; display: inline-block; visibility: visible; box-shadow: inset 0px 0px 0px 2px #FFFFFF; border: 1px solid #000001;}
+input[type='checkbox']:after {width: 14px; height: 14px; border-radius: 0px; top: -2px; left: 0px; position: relative; background-color: #FFFFFF; content: ''; display: inline-block; visibility: visible; border: 1px solid #000001;}
+input[type='checkbox']:checked:after {width: 14px; height: 14px; border-radius: 0px; top: -2px; left: 0px; position: relative; background-color: #000001; content: ''; display: inline-block; visibility: visible; box-shadow: inset 0px 0px 0px 2px #FFFFFF; border: 1px solid #000001;}
+#phone_number {height:38px !important; width:100% !important;}
+@supports (-webkit-touch-callout: none) {
+input[type='radio']:after, input[type='radio']:checked:after {top: -4px; left: -2px;}
+input[type='checkbox']:after, input[type='checkbox']:checked:after {top: -4px;left: -2px;}
+}
+.col-sm-3.control-label {padding-left:0 !important; text-align:left !important; padding-top:10px !important; padding-bottom:10px !important;}
+.col-sm-7.input-group {padding-left:0 !important; padding-right:0 !important;}
+.optin-checkbox{
+margin-top:5px;
+margin-left:5px;
+}
+.optin-checkbox{
+text-align:right;
+}
+select{
+padding:10px;
+}
+@media only screen and (max-width:599px) {
+.pt0 {padding: 0 !important;}
+.section {padding: 10px !important;}
+.section .options {padding: 0 !important;}
+.footer {padding: 10px 10px 30px 10px !important;}
+.btn {font-size:12px !important}
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script>
+$(function(){
+if($(".alert.alert-success").is(":visible")){
+$('.success').hide();
+} else {
+$('.success').show();
+}
+});
+$(function () {
+$("#chksms input").click(function () {
+if ($(this).is(":checked")) {
+$("#phone-details").show();
+$("#mobile").prop("required", true);
+}
+else {
+$("#phone-details").hide();
+$("#mobile").prop("required", false);
+}
+});
+$(".newsletter-field").click(function () {
+if ($(this).is(":checked")) {
+$(".newsletter-list").prop('checked', true);
+}
+else {
+$(".newsletter-list").prop('checked', false);
+}
+});
+$(".rewards-field").click(function () {
+if ($(this).is(":checked")) {
+$(".rewards-list").prop('checked', true);
+}
+else {
+$(".rewards-list").prop('checked', false);
+}
+});
+});
+</script>
+<div class='container' style="text-align: center;">
+<div class="logo">
+<a href="https://www.monsoon.co.uk/" target="_blank"><img alt="Monsoon" border="0" src="https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/monsoon/assets/img/logo-monsoon-3244c22746.png" style="display:block; margin:0 auto; font-size:18px; width:135px; height:auto;" /></a>
+</div>
+<form action="" class="" method="post">
+<div><!-- class="success" -->
+<div class="section">
+<div class="intro">
+<h1 style="text-align:center; font-weight:normal;"> MARKETING PREFERENCES </h1>
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto;" width="50%">
+<!-- top padding --> <tr><td style="font-size:1px; line-height:12px;">&nbsp;</td></tr> <!-- top padding : end -->
+<!-- line --> <tr><td style="font-size:1px; line-height:1px; background-color:#000000;">&nbsp;</td></tr> <!-- line : end -->
+<!-- bottom padding --> <tr><td style="font-size:1px; line-height:12px;">&nbsp;</td></tr> <!-- bottom padding : end -->
+</table>
+</div>
+</div>
+<div class="section">
+<div>
+<h2 style="text-align:left; font-weight:bold;"> Monsoon Marketing Preferences </h2>
+<p style="text-align:left; font-weight:normal;"> Hear from Monsoon via the following communications </p>
+</div>
+<div class="flash">
+{{ flash_messages() }}
+</div>
+</div>
+<div class="section">
+<div>
+<h4 style="text-align:left; font-weight:bold;"> OPT IN </h4>
+</div>
+<div class="options" style="border-top:1px solid #f3f3f3; border-bottom:1px solid #f3f3f3">
+
+<div class="checkbox" id="chkemail">
+    {% if profile.properties.newsletter_email_monsoon == 'true' %}
+        <input type="hidden" name="properties.newsletter_email_monsoon" value="false" />
+        <label>
+            <input class="newsletter-field" type="checkbox" name="properties.newsletter_email_monsoon" value="true" checked />
+            <input class="newsletter-list" type="checkbox" name='Email Newsletter:list_selected' value='5' style="display:none;visibility:hidden;" checked /> Email Newsletter
+            <input type='hidden' name='Email Newsletter:list_option' value='5' style="display:none;visibility:hidden;" />
+        </label>
+    {% else %}
+        <input type="hidden" name="properties.newsletter_email_monsoon" value="false" />
+        <label>
+            <input class="newsletter-field" type="checkbox" name="properties.newsletter_email_monsoon" value="true" />
+            <input class="newsletter-list" type="checkbox" name='Email Newsletter:list_selected' value='5' style="display:none;visibility:hidden;" /> Email Newsletter
+            <input type='hidden' name='Email Newsletter:list_option' value='5' style="display:none;visibility:hidden;" />
+        </label>
+    {% endif %}
+</div>
+<div class="checkbox" id="chktreats">
+    {% if profile.properties.reward_email_monsoon == 'true' %}
+        <input type="hidden" name="properties.reward_email_monsoon" value="false" />
+        <label>
+            <input class="rewards-field" type="checkbox" name="properties.reward_email_monsoon" value="true" checked />
+            <input class="rewards-list" type='checkbox' name='Rewards Newsletter:list_selected' value='6' style="display:none;visibility:hidden;" checked /> Rewards Newsletter
+            <input type='hidden' name='Rewards Newsletter:list_option' value='6' style="display:none;visibility:hidden;" />
+        </label>
+    {% else %}
+        <input type="hidden" name="properties.reward_email_monsoon" value="false" />
+        <label>
+            <input class="rewards-field" type="checkbox" name="properties.reward_email_monsoon" value="true" />
+            <input class="rewards-list" type='checkbox' name='Rewards Newsletter:list_selected' value='6' style="display:none;visibility:hidden;" /> Rewards Newsletter
+            <input type='hidden' name='Rewards Newsletter:list_option' value='6' style="display:none;visibility:hidden;" />
+        </label>
+    {% endif %}
+</div>
+
+<div class="checkbox" id="chksms">
+   {{ sms_checkbox_macro("SMS", sms_marketing_or_transactional='marketing', type='checkbox') }}
+</div>
+
+</div>
+</div>
+<div class="section">
+<h2 style="text-align:left; font-weight:bold;">Contact Details</h2>
+<div class="options" style="border-top:1px solid #f3f3f3; border-bottom:1px solid #f3f3f3">
+<div id="email-details">
+    <div class="form-group">
+        <label for="email" class="control-label">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" value="{{profile.email}}" readonly="true" /><!-- required -->
+    </div>
+</div>
+<div id="phone-details">
+    {{ append_phone_number_macro_resources() }} {{ phone_number_macro() }}
+</div>
+</div>
+</div>
+<div class="section">
+    <div class="button">
+        <div id="update-prefs" style="padding-bottom:40px;">
+            <input class="btn btn-primary btn-lg btn-block" name="action:update" type="submit" value="SAVE MY PREFERENCES" onClick="validatePhone(event)" />
+        </div>
+    </div>
+    <!--
+    <div class="footer">
+    <p>*By selecting unsubscribe you will not receive further marketing communication.</p>
+    </div>
+    -->
+</div>
+</div><!-- end success -->
+</form>
+</div><!-- end container -->

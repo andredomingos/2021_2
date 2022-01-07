@@ -1,0 +1,298 @@
+{% from 'macros.html' import list_checkbox_macro, list_radio_macro, flash_messages with context %}
+<!-- Client name / acc id / unsubscribe -->
+<style type="text/css">
+   body {
+   background:#EEEEEE;
+   color:#000000;
+   font-family: Arial, sans-serif;
+   }
+   h1, h2, p, a {
+   margin: 0;
+   padding: 0;
+   color: #000000;
+   }
+   h1, h2 {
+   display: block;
+   font-weight: bold;
+   line-height: 1.3;
+   }
+   p {
+   font-size: 16px;
+   font-weight: normal;
+   line-height: 1.5;
+   }
+   label {
+   display:block !important;
+   margin-left: -3px;
+   color: #000000;
+   font-size: 16px;
+   line-height: 1.3;
+   font-weight: normal;
+   padding-bottom: 0;
+   }
+   hr {
+   display: block;
+   height: 1px;
+   border: 0;
+   border-top: 1px solid #000000;
+   margin: 0 auto;
+   padding: 0;
+   width: 90%;
+   }
+   a {
+   color: #000000;
+   text-decoration: underline;
+   }
+   /* optional
+   a:hover {
+   color: #333333;
+   text-decoration: none;
+   }
+   */
+   .container {
+   padding: 0;
+   max-width: 600px; /* width of inner page - change if needed */
+   }
+   .alert-success {
+   background-color: #ffffff;
+   color: #000000;
+   font-family: Arial, sans-serif;
+   border:1px solid #000000; /* optional */
+   }
+   .button a {
+   text-decoration: none;
+   }
+   .btn {
+   color: #FFFFFF;
+   background-color: #ff5757;
+   border-color: #ff5757;
+   }
+   .btn:hover, .btn:focus {
+   color: #FFFFFF !important;
+   background-color: #ff5757;
+   opacity: 0.9 !important;
+   transition: 0.2s ease-in-out;
+   }
+   .btn-primary {
+   color: #FFFFFF;
+   background-color: #1E1F4D;
+   border-color: #000000;
+   }
+   .btn-primary:hover, .btn-primary:focus {
+   color: #FFFFFF !important;
+   background-color: #1E1F4D;
+   opacity: 0.9 !important;
+   transition: 0.2s ease-in-out;
+   }
+   .radio input[type="radio"],
+   .radio-inline input[type="radio"],
+   .checkbox input[type="checkbox"],
+   .checkbox-inline input[type="checkbox"] {
+   margin-left: -25px;
+   width: 12px;
+   height: 12px;
+   }
+   .checkbox label, .radio label {
+   padding-left: 25px;
+   }
+   .form-horizontal .radio,
+   .form-horizontal .checkbox {
+   padding-top: 5px;
+   padding-bottom: 5px;
+   }
+   .flash {
+   padding: 0 20px;
+   }
+   .logo {
+   padding: 40px 0 20px 0;
+   }
+   .banner {
+   margin: 0 auto;
+   padding: 0;
+   }
+   .intro {
+   padding: 10px 0;
+   }
+   .section {
+   background-color: #FFFFFF;
+   padding: 20px 40px;
+   }
+   .section .options {
+   padding: 10px 0;
+   }
+   .section .button {
+   padding: 10px 0;
+   text-align: center;
+   display: inline-block;
+   }
+   .section h1 {
+   padding-bottom: 10px;
+   text-align: center;
+   }
+   .section h2 {
+   padding-bottom: 10px;
+   text-align: center;
+   }
+   .section p {
+   text-align: left;
+   padding-bottom: 0px;
+   }
+   .section label {
+   text-align: left;
+   margin: 0;
+   }
+   .footer {
+   background-color: #FFFFFF;
+   padding: 20px;
+   }
+   .footer p {
+   font-size: 14px;
+   text-align: center;
+   }
+   /* styled radio button and checkboxes - remove if not needed */
+   input[type='radio']:after {
+   width: 14px;
+   height: 14px;
+   border-radius: 14px;
+   top: -2px;
+   left: 0px;
+   position: relative;
+   background-color: #FFFFFF;
+   content: '';
+   display: inline-block;
+   visibility: visible;
+   border: 1px solid #000000;
+   }
+   input[type='radio']:checked:after {
+   width: 14px;
+   height: 14px;
+   border-radius: 14px;
+   top: -2px;
+   left: 0px;
+   position: relative;
+   background-color: #000000;
+   content: '';
+   display: inline-block;
+   visibility: visible;
+   box-shadow: inset 0px 0px 0px 2px #FFFFFF;
+   border: 1px solid #000000;
+   }
+   input[type='checkbox']:after {
+   width: 14px;
+   height: 14px;
+   border-radius: 0px;
+   top: -2px;
+   left: 0px;
+   position: relative;
+   background-color: #FFFFFF;
+   content: '';
+   display: inline-block;
+   visibility: visible;
+   border: 1px solid #000000;
+   }
+   input[type='checkbox']:checked:after {
+   width: 14px;
+   height: 14px;
+   border-radius: 0px;
+   top: -2px;
+   left: 0px;
+   position: relative;
+   background-color: #000000;
+   content: '';
+   display: inline-block;
+   visibility: visible;
+   box-shadow: inset 0px 0px 0px 2px #FFFFFF;
+   border: 1px solid #000000;
+   }
+   @supports (-webkit-touch-callout: none) {
+   input[type='radio']:after, input[type='radio']:checked:after {
+   top: -4px;
+   left: -2px;
+   }
+   input[type='checkbox']:after, input[type='checkbox']:checked:after {
+   top: -4px;
+   left: -2px;
+   }
+   }
+   /* remove input styles above if not needed */
+</style>
+<style type="text/css">
+   @media only screen and (max-width:599px) {
+   .section {
+   padding: 20px;
+   }
+   .footer {
+   padding: 20px;
+   }
+   }
+   @media only screen and (max-width:339px) {
+   .section {
+   padding: 10px;
+   }
+   .footer {
+   padding: 10px;
+   }
+   }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script>
+   $(document).ready(function(){
+   if($(".alert.alert-success").is(":visible")){
+   $('.success').hide();
+   } else {
+   $('.success').show();
+   }
+   $("input[type='radio']").change(function(){
+   if($(this).val()=="other"){
+   $("#otherAnswer").show();
+   } else {
+   $("#otherAnswer").hide();
+   }
+   });
+   });
+</script>
+<div class='container' style="text-align: center;">
+   <div class="logo">
+      <a href="http://www.ometria.com/" target="_blank"><img alt="" src="https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/model_v3/assets/img/logo-34c0ca50be.png" style="display: block; width: 200px; height: auto; padding:0; border: none; margin: 0 auto;" /></a>
+   </div>
+   <!-- hero image - if needed -- <div class="banner">
+      <a href="http://www.ometria.com/" target="_blank"><img alt="" src="https://dummyimage.com/600x300/eeeeee/000" style="display: block; width: 100%; height: auto; padding:0; border: none; margin: 0 auto;" /></a>
+      </div> -->
+   <form action="" class="" method="post">
+      <div class="flash">
+         {{ flash_messages() }}
+      </div>
+      <div class="success">
+         <div class="section">
+            <div class="intro">
+               <p>Please provide the reason below to unsubscribe and your preferences will be automatically updated in our database.</p>
+            </div>
+            <div class="options">
+               <div class="radio">
+                  <label> <input type="radio" name="reason" value="Too many offers emails" /> Too many offers emails. </label>
+               </div>
+               <div class="radio">
+                  <label> <input type="radio" name="reason" value="Content not relevant" /> Content not relevant. </label>
+               </div>
+               <div class="radio">
+                  <label> <input type="radio" name="reason" value="I didn’t sign up" /> I didn’t sign up. </label>
+               </div>
+               <div class="radio">
+                  <label> <input type="radio" name="reason" value="other" id="other-radio" /> Other (fill below): </label>
+               </div>
+               <div class="form-group" style="display:none;" id="otherAnswer">
+                  <input class="form-control" data-field="reason:other" name="reason:other" value="" />
+               </div>
+               <div class="button">
+                  <input class="btn btn-lg btn-block" name="action:unsubscribe" type="submit" value="Unsubscribe" />
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end success -->
+   </form>
+   <div class="footer">
+      <p> Update your <a href="{{ url_for('preferences_centre_view', account_hash=account.hash, profile_hash=profile.hash, route='profile', **request.args)}}">Preferences</a> | View our <a href="http://www.ometria.com/">Privacy Policy</a>.</p>
+   </div>
+</div>
+<!-- end container -->

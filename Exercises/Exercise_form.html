@@ -1,0 +1,79 @@
+<form action="https://api.ometria.com/forms/signup" method="post">
+	<input type="hidden" name="__form_id" value="b105236b19d9d55742a0fc3eecdc40ef" />
+	<input type="hidden" name="email" value="" autocomplete="off" />
+	<div style="display:none !important">
+		<input name="__email" type="email" value="" autocomplete="off" />
+	</div>
+	<input name="@account" type="hidden" value="bd4c4a09e435d91b" />
+	<input name="@return_url" type="hidden" value="" />
+	<input name="@subscription_status" type="hidden" value="UNCHANGED" />
+
+
+	<!-- Form elements go here: Style as you wish -->
+
+	<table>
+		<tr>
+			<th>Email address</th>
+			<td>
+				<input name="ue" type="text" value="" />
+			</td>
+		</tr>
+		<tr>
+			<th>Phone number</th>
+			<td>
+				<input name="phone_number" type="text" value="" />
+			</td>
+		</tr>
+		<tr>
+			<th>DOB</th>
+			<td>
+				<input name="date_of_birth" type="date" value="" />
+			</td>
+		</tr>
+		<tr>
+			<th>What's your Kid's age</th>
+			<td>
+				<input type="radio" name="properties.kid_age" value="&lt;5">&lt;5
+                <input type="radio" name="properties.kid_age" value="5-10">5-10
+                <input type="radio" name="properties.kid_age" value="&gt;10">&gt;10
+			</td>
+		</tr>
+		<tr>
+			<th>Do you have a secondary number?</th>
+			<td>
+                <input type="radio" name="properties.secondary_number" value="Yes">Yes
+                <input type="radio" name="properties.secondary_number" value="No">No
+			</td>
+		</tr>
+		<tr>
+			<th>Competition question</th>
+			<td>
+                <input type="radio" name="properties.competition_question" value="Question A">Question A
+                <input type="radio" name="properties.competition_question" value="Question B">Question B
+                <input type="radio" name="properties.competition_question" value="Question C">Question C
+			</td>
+		</tr>
+        <tr>
+			<th>I want to subscribe to third party emails</th>
+			<td>
+				<input name="@add_to_lists[]" type="checkbox" value="1111" id="">
+			</td>
+		</tr>
+        <tr>
+			<th>I want to subscribe to your emails</th>
+			<td>
+                <input name="@subscription_status" type="checkbox" value="SUBSCRIBED" /><!-- subscribe to list -->
+			</td>
+		</tr>
+        <tr style="display: none;">
+			<th style="display: none;"></th>
+			<td>
+                <input name="@add_to_lists[]" type="hidden" value="456" checked/>
+			</td>
+		</tr>
+	</table>
+	<input type="submit" value="Submit form" style="padding: 5px 20px;" name="submit" />
+
+	<!-- End of form elements -->
+
+</form>

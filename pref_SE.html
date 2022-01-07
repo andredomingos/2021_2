@@ -1,0 +1,983 @@
+{% from 'macros.html' import list_checkbox_macro, list_radio_macro, sms_checkbox_macro, append_phone_number_macro_resources, phone_number_macro, flash_messages with context %}
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style>
+@font-face {
+   font-family: 'Campton';
+   src: url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/reima/assets/img/fonts/Campton-Bold-bc7e0e2a02.woff2') format('woff2'),
+      url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/reima/assets/img/fonts/Campton-Bold-4f2f08d399.woff') format('woff'),
+      url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/reima/assets/img/fonts/Campton-Bold-6dc4024874.ttf') format('truetype');
+   font-weight: bold;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'Campton Book';
+   src: url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/reima/assets/img/fonts/Campton-Book-4ec678a6d7.eot');
+   src: url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/reima/assets/img/fonts/Campton-Book-b2cd2e2d3e.woff2') format('woff2'),
+      url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/reima/assets/img/fonts/Campton-Book-f5b35d2efd.woff') format('woff'),
+      url('https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/reima/assets/img/fonts/Campton-Book-d1f5dd080c.ttf') format('truetype');
+   font-weight: 500;
+   font-style: normal;
+}
+</style>
+<style>
+   html {
+      font-family: sans-serif;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      font-size: 16px;
+      line-height: 1.375;
+  }
+   body{
+   font-family: "Campton Book", Verdana, Helvetica, Arial, sans-serif;
+   background-color: #f2f2f2;
+   color: #38383b;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 1.375;
+   -webkit-font-smoothing: antialiased;
+   }
+   h1 {
+      font-size: 2em;
+      margin: 0.67em 0
+   }
+   h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+      font-weight: 700;
+      margin-top: 0;
+      font-family: "Campton Book" , Verdana, Helvetica, Arial, sans-serif;
+   }
+   h2, .h2 {
+      font-size: 2.25rem;
+      letter-spacing: -.03rem;
+      margin-bottom: 1rem;
+      line-height: 1.25;
+   }
+   p{ margin-bottom:10px;}
+   .prefs-main {
+      background-color: #fff;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+   }
+   .alert-success { background-color: #ffffff;border:1px solid #3C7642; color: #3C7642; }
+   .btn {
+      border-radius: 2px;
+      -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+      background-color: #d2092d;
+      border: 1px solid #d2092d;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 1rem;
+      line-height: 1.375;
+      padding: .6875rem 1.5rem;
+      text-align: center;
+      text-decoration: none;
+      -webkit-transition: background-color .2s, border-color .2s, color .2s;
+      transition: background-color .2s, border-color .2s, color .2s;
+   }
+   .btn:hover {
+      color: #fff;
+    text-decoration: none !important;
+    background-color: #BA001F;
+    border-color: #BA001F;
+   }
+  
+   label
+   {
+   display:block !important;
+   margin-bottom: 10px;
+   padding-top:0;
+   font-size: 14px;
+   font-weight:700;
+   }
+   input[type="checkbox"] {
+   margin-right:5px;
+   font-weight:bold;
+   }
+   .form-control{
+      border-radius: 0;
+      -moz-border-radius: 0;
+      -webkit-border-radius: 0;
+      background-color: #fff;
+      border: 1px solid #949494;
+      color: #38383b;
+      display: block;
+      font-size: 1rem;
+      line-height: 1.375;
+      padding: .6875rem 1rem;
+      width: 100%;
+      -webkit-appearance: none;
+      -webkit-transition: background-color 0.2s, border-color 0.2s;
+      transition: background-color 0.2s, border-color 0.2s;
+      height:auto;
+   }
+   .form-group {
+      margin-bottom: 1.375rem;
+    }
+   .custom-select {
+      line-height: 1.375;
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
+      position: relative;
+      border: 1px solid #949494;
+      border-radius: 2px;
+      overflow: hidden;
+      background-color: #f2f2f2;
+      text-overflow: ellipsis;
+      background-color: #fff;
+      -webkit-transition: border-color 0.2s;
+      transition: border-color 0.2s;
+   }
+   .prefs-section { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid #ccc; }
+   .prefs-age-selection { column-gap: 1rem; -webkit-column-count: 2; -moz-column-count: 2;  column-count: 2; }
+   .prefs-age-selection, .prefs-gender-selection, .prefs-category-selection {list-style: none; margin: .75rem 0 1.75rem; padding: 0;}
+   .prefs-age-selection .checkbox {margin-bottom: 1rem; margin-top: 0px;}
+   .prefs-gender-selection .checkbox, .prefs-gender-selection .radio {margin-bottom: 1rem; margin-top: 0px;}
+   .custom-select select {
+      font-weight: 400 !important;
+      color: #38383b;
+      cursor: pointer;
+      padding: .6875rem 2.25rem .6875rem 1rem;
+      width: 100%;
+      border: none;
+      box-shadow: none;
+      background-color: transparent;
+      background-image: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+   }
+   option {
+      font-weight: normal;
+      display: block;
+      white-space: nowrap;
+      min-height: 1.2em;
+      padding: 0px 2px 1px;
+   }
+   .input-field {
+      border-radius: 0;
+      -moz-border-radius: 0;
+      -webkit-border-radius: 0;
+      background-color: #fff;
+      border: 1px solid #949494;
+      color: #38383b;
+      display: block;
+      font-size: 1rem;
+      line-height: 1.375;
+      padding: .6875rem 1rem;
+      width: 100%;
+      -webkit-appearance: none;
+      -webkit-transition: background-color 0.2s, border-color 0.2s;
+      transition: background-color 0.2s, border-color 0.2s;
+   }
+   .input-label{
+      font-weight: 600 !important;
+      font-size: .875rem;
+      margin-bottom: 5px;
+      display: block;
+   }
+   .input-label-required::after {
+      content: ' *';
+      color: #d2092d;
+   }
+   
+   .prefs-header {padding: 1.5rem; text-align: center; display: block;}
+   .prefs-body {padding: 2rem;}
+   .prefs-intro { margin-bottom: 2rem;}
+   .prefs-subtitle {font-weight: 600 !important; font-size: .875rem; text-transform: uppercase; letter-spacing: .02rem;}
+   .margin-bottom-sm {margin-bottom: .625rem;}
+   small, .text-sm, .text-small {font-size: .875rem;}
+   input[type="checkbox"]:before {
+      position: absolute;
+      left: 0;
+      top: -2px;
+      content: '';
+      background-color: #f2f2f2;
+      border-radius: 2px;
+      width: 16px;
+      height: 16px;
+      overflow: hidden;
+      border: 1px solid #949494;
+      -webkit-transition: background-color .2s, border-color .2s;
+      transition: background-color .2s, border-color .2s;
+   }
+   input[type='checkbox']:checked:after {
+      font-family: arial;
+      font-size: 18px;
+      content: '✓';
+      position: absolute;
+      color: #fff;
+      line-height: 18px;
+      left: 0px;
+      top: -2px;
+      background-color: #000000;
+      width: 16px;
+      height: 16px;
+      border-radius: 2px;
+   }
+
+   input[type="radio"]:before {
+      border-radius: 50%;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      content: '';
+      background-color: #f2f2f2;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #949494;
+      -webkit-transition: background-color .2s, border-color .2s;
+      transition: background-color .2s, border-color .2s;
+   }
+   input[type='radio']:checked:after {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      top: -1px;
+      left: -1px;
+      position: relative;
+      background-color: #f2f2f2;
+      content: '';
+      display: inline-block;
+      visibility: visible;
+      box-shadow: inset 0px 0px 0px 2px #ffffff;
+      border: 4.5px solid #3C3B3A;
+   }
+
+   .prefs-gender-selection input {
+      margin-bottom: 1rem;
+   }
+   .prefs-footer {
+      color: #949494;
+      font-size: .875rem;
+      margin-top: 0;
+      padding-top: 0;
+  }
+  .alert-success {
+   border: none;
+   padding: 0;
+   margin-top: -20px !important;
+   background: none !important;
+   color: #000000 !important;
+   text-align: left !important;
+   }
+   .prefs-footer a{color: #949494; text-decoration: underline;}
+   .green{color: #3c763d;background-color: #abecd7;border-color: #abecd7; border-radius: 2px;}
+   @media only screen and (min-width: 700px) {
+   .prefs-name {display: grid;grid-template-columns: repeat(2, [col-start] 1fr); gap: 1rem;}
+   .prefs-gender-selection {grid-template-columns: repeat(3, [col-start] 1fr);}
+   .prefs-age-selection { -webkit-column-count: 3; -moz-column-count: 3; column-count: 3;}
+   }
+
+   @media only screen and (max-width: 600px) {
+   h1{font-size: 20px;}
+   h2{font-size: 16px;}
+   .width-btn{width:100%;}
+   .mob-center{text-align:center !important; display:block;padding: 10px 0}
+   .nobmargin {margin-bottom: 0;}
+   .notbpadd {padding-top:0 !important;padding-bottom:0 !important;}
+   .boldfs {font-weight:bold;}
+   .prefs-header {padding: 1rem;}
+   .prefs-body {padding: 1.5rem;}
+   .prefs-main {margin-top: 0; margin-bottom: 0; width: 100% !important;}
+   .img100{width: 100% !important; max-width: 100% !important;}
+   }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script>
+   $(function () {
+      $("#country").change(function() {
+        var val = $(this).val();
+         if(val === "FI") {
+            $("#FI_graph_form").show();
+            $("#SE_graph_form").hide();
+            $("#NO_graph_form").hide();
+            $("#DE_graph_form").hide();
+         }
+         else if(val === "SE") {
+            $("#SE_graph_form").show();
+            $("#FI_graph_form").hide();
+            $("#NO_graph_form").hide();
+            $("#DE_graph_form").hide();
+         }
+         else if(val === "NO") {
+            $("#NO_graph_form").show();
+            $("#FI_graph_form").hide();
+            $("#SE_graph_form").hide();
+            $("#DE_graph_form").hide();
+         }
+         else if(val === "DE") {
+            $("#DE_graph_form").show();
+            $("#FI_graph_form").hide();
+            $("#SE_graph_form").hide();
+            $("#NO_graph_form").hide();
+         }
+         else{
+            $("#FI_graph_form").hide();
+            $("#SE_graph_form").hide();
+            $("#NO_graph_form").hide();
+            $("#DE_graph_form").hide();
+         }
+      });
+    });
+
+    $(function () {
+      $("#child_number").change(function() {
+        var val = $(this).val();
+         if(val === "1") {
+            $("#child_n1").show();
+            $("#child_n2").hide();
+            $("#child_n3").hide();
+            $("#child_n4").hide();
+            $("#child_n5").hide();
+         }
+         else if(val === "2") {
+            $("#child_n1").show();
+            $("#child_n2").show();
+            $("#child_n3").hide();
+            $("#child_n4").hide();
+            $("#child_n5").hide();
+         }
+         else if(val === "3") {
+            $("#child_n1").show();
+            $("#child_n2").show();
+            $("#child_n3").show();
+            $("#child_n4").hide();
+            $("#child_n5").hide();
+         }
+         else if(val === "4") {
+            $("#child_n1").show();
+            $("#child_n2").show();
+            $("#child_n3").show();
+            $("#child_n4").show();
+            $("#child_n5").hide();
+         }
+         else if(val === "5") {
+            $("#child_n1").show();
+            $("#child_n2").show();
+            $("#child_n3").show();
+            $("#child_n4").show();
+            $("#child_n5").show();
+         }
+         else{
+            $("#child_n1").hide();
+            $("#child_n2").hide();
+            $("#child_n3").hide();
+            $("#child_n4").hide();
+            $("#child_n5").hide();
+         }
+      });
+    });
+    $('input[type=checkbox]').change(function(e){
+      if ($('.prefs-age-selection > input[type=checkbox]:checked').length > 2) {
+           $(this).prop('checked', false)
+      }
+   })
+</script>
+
+<script>
+   $(document).ready(function(){
+   if($(".alert.alert-success").is(":visible")){
+        $('.msg-success').show();
+       } else {
+       $('.msg-success').hide();
+       }
+   });
+</script>
+
+
+
+<div class='prefs-main green'>
+   <div class="msg-success">
+      <div class="prefs-body" style="padding: 20px !important;">
+         {{ flash_messages(success_msg='Tack för att du uppdaterade dina preferenser', error_msg='Oj, något gick fel') }}
+         <a class="btn btn-lg btn-block-xs" style="margin: 0 auto !important; display: block; width: 200px;" href="https://www.reima.com/se">
+            Besök reima.com
+         </a>
+      </div>
+   </div>
+</div>
+
+
+
+   <div class='prefs-main'>
+      <header class="prefs-header">
+         <img alt="Reima" src="https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/reima/assets/img/reima-logo-red-90dae9be11.png" width="110" style=" display: block; height:auto; margin: auto;"/>
+      </header>
+
+      <div class="hero">
+         
+            <img alt="Reima" src="https://s3-eu-west-1.amazonaws.com/assets.ometria.email/emails/reima/assets/img/prefs-hero-desktop-fa1a198d9a.jpg" width="720" class="img100"/>
+       
+      </div>
+  
+   <form action="" class="prefs-section outline-none" method="post">
+
+      <div class="prefs-body">
+         <h1 class="h2"> Moi {{profile.firstname}}! </h1>
+         <p class="prefs-intro">
+            Vi är här för att hjälpa dig att få ut det mesta av varje stund med dina barn. Här kan du uppdatera dina preferenser om hur du vill hålla kontakten med oss.
+          </p>
+
+
+         
+
+         <section class="prefs-section">
+            <h2 class="prefs-subtitle">Dina uppgifter</h2>
+            <div class="form-group">
+               <label class="input-label input-label-required">E-postadress</label>
+               <div >
+                  <input class="input-field" name="email" type="email" value="{{ profile.email}}" required/>
+               </div>
+            </div>
+            <div class="prefs-name">
+               <div class="form-group">
+                  <label class="input-label input-label-required">Förnamn</label>
+                  <div >
+                     <input class="input-field" name="firstname" value="{{ profile.firstname }}" required/>
+                  </div>
+               </div>
+               <div class="form-group">
+                  <label class="input-label ">Efternamn</label>
+                  <div >
+                     <input class="input-field" name="lastname" value="{{ profile.lastname }}"/>
+                  </div>
+               </div>
+            </div>
+           
+            <div class="form-group">
+               <label class="input-label">Telefon</label>
+               <div >
+                  <input class="input-field" name="properties.phone_number" type="tel" value="{{ profile.properties.phone_number}}"/>
+               </div>
+            </div>
+            <div class="form-group">
+               <div class="checkbox">
+                  {{ sms_checkbox_macro("Ja tack, jag vill motta Reima Friends erbjudanden på sms", sms_marketing_or_transactional='marketing', type='checkbox') }}
+               </div>
+            </div>
+         </section>
+
+         <section class="prefs-section ">
+            <h2 class="prefs-subtitle">Dina preferenser</h2>
+
+               <p class="prefs-intro">
+                För att kunna ge dig bästa möjliga innehåll även då barnen växer, vill vi gärna veta födelsedagen för dem du handlar till:
+               </p>
+
+               <div class="form-group">
+                  <label class="input-label input-label">Hur många barn handlar du till?</label>
+                  <div class="custom-select">
+                     <select id="child_number" name="properties.number_of_children" value="{{profile.properties.number_of_children}}">
+                     
+                        {% if profile.properties.number_of_children == 0 %}
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        {% elif profile.properties.number_of_children == 1 %}
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        {% elif profile.properties.number_of_children == 2 %}
+                        <option value="1">1</option>
+                        <option value="2" selected>2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        {% elif profile.properties.number_of_children == 3 %}
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3" selected>3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        {% elif profile.properties.number_of_children == 4 %}
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5">5</option>
+                        {% elif profile.properties.number_of_children == 5 %}
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5" selected>5</option>
+                        {% else %}
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        {% endif%}
+                     </select>
+                  </div>
+               </div>
+                  
+
+
+
+            <div>
+               {% if profile.properties.number_of_children == 1 %}
+                  <div id="child_n1" >
+                     <div class="form-group">
+                        <label class="input-label">Barn 1 födelsedag</label>
+                        <div >
+                           <input class="form-control" name="properties.child_1_birthday" type="date" value="{{ profile.properties.child_1_birthday }}"/>
+                        </div>
+                     </div>
+                  </div>
+                  <div id="child_n2" style="display: none;">
+                     <div class="form-group">
+                        <label class="input-label">Barn 2 födelsedag</label>
+                        <div >
+                           <input class="form-control" name="properties.child_2_birthday" type="date" value="dd/mm/yyyy"/>
+                        </div>
+                     </div>
+                  </div>
+                  <div id="child_n3" style="display: none;">
+                     <div class="form-group">
+                        <label class="input-label">Barn 3 födelsedag</label>
+                        <div >
+                           <input class="form-control" name="properties.child_3_birthday" type="date" value="dd/mm/yyyy"/>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div id="child_n4" style="display: none;">
+                     <div class="form-group">
+                        <label class="input-label">Barn 4 födelsedag</label>
+                        <div >
+                           <input class="form-control" name="properties.child_4_birthday" type="date" value="dd/mm/yyyy"/>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div id="child_n5" style="display: none;">
+                     <div class="form-group">
+                        <label class="input-label">Barn 5 födelsedag</label>
+                        <div >
+                           <input class="form-control" name="properties.child_5_birthday" type="date" value="dd/mm/yyyy"/>
+                        </div>
+                     </div>
+                  </div>
+
+
+               {% elif profile.properties.number_of_children == 2 %}
+
+               <div id="child_n1" >
+                  <div class="form-group">
+                     <label class="input-label">Barn 1 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_1_birthday" type="date" value="{{ profile.properties.child_1_birthday }}"/>
+                     </div>
+                  </div>
+               </div>
+
+               <div id="child_n2">
+                  <div class="form-group">
+                     <label class="input-label">Barn 2 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_2_birthday" type="date" value="{{ profile.properties.child_2_birthday }}"/>
+                     </div>
+                  </div>
+               </div>
+
+
+               <div id="child_n3" style="display: none;">
+                  <div class="form-group">
+                     <label class="input-label">Barn 3 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_3_birthday" type="date" value="{{ profile.properties.child_3_birthday }}"/>
+                     </div>
+                  </div>
+               </div>
+
+               <div id="child_n4" style="display: none;">
+                  <div class="form-group">
+                     <label class="input-label">Barn 4 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_4_birthday" type="date" value="{{ profile.properties.child_4_birthday }}"/>
+                     </div>
+                  </div>
+               </div>
+
+               <div id="child_n5" style="display: none;">
+                  <div class="form-group">
+                     <label class="input-label">Barn 5 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_5_birthday" type="date" value="{{ profile.properties.child_5_birthday }}"/>
+                     </div>
+                  </div>
+               </div>
+               {% elif profile.properties.number_of_children == 3 %}
+               <div id="child_n1" >
+                  <div class="form-group">
+                     <label class="input-label">Barn 1 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_1_birthday" type="date" value="{{ profile.properties.child_1_birthday }}"/>
+                     </div>
+                  </div>
+               </div>
+
+               <div id="child_n2">
+                  <div class="form-group">
+                     <label class="input-label">Barn 2 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_2_birthday" type="date" value="{{ profile.properties.child_2_birthday }}"/>
+                     </div>
+                  </div>
+               </div>
+
+               <div id="child_n3" >
+                  <div class="form-group">
+                     <label class="input-label">Barn 3 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_3_birthday" type="date" value="{{ profile.properties.child_3_birthday }}"/>
+                     </div>
+                  </div>
+               </div>
+
+               <div id="child_n4" style="display: none;">
+                  <div class="form-group">
+                     <label class="input-label">Barn 4 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_4_birthday" type="date" value="{{ profile.properties.child_4_birthday }}"/>
+                     </div>
+                  </div>
+               </div>
+
+               <div id="child_n5" style="display: none;">
+                  <div class="form-group">
+                     <label class="input-label">Barn 5 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_5_birthday" type="date" value="{{ profile.properties.child_5_birthday }}"/>
+                     </div>
+                  </div>
+               </div>
+
+
+               {% elif profile.properties.number_of_children == 4 %}
+               <div id="child_n1" >
+                  <div class="form-group">
+                     <label class="input-label">Barn 1 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_1_birthday" type="date" value="{{ profile.properties.child_1_birthday }}"/>
+                     </div>
+                  </div>
+               </div>
+
+               <div id="child_n2">
+                  <div class="form-group">
+                     <label class="input-label">Barn 2 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_2_birthday" type="date" value="{{ profile.properties.child_2_birthday }}"/>
+                     </div>
+                  </div>
+               </div>
+
+               <div id="child_n3" >
+                  <div class="form-group">
+                     <label class="input-label">Barn 3 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_3_birthday" type="date" value="{{ profile.properties.child_3_birthday }}"/>
+                     </div>
+                  </div>
+               </div>
+               <div id="child_n4" >
+                  <div class="form-group">
+                     <label class="input-label">Barn 4 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_4_birthday" type="date" value="{{ profile.properties.child_4_birthday }}"/>
+                     </div>
+                  </div>
+               </div>
+
+               <div id="child_n5" style="display: none;">
+                  <div class="form-group">
+                     <label class="input-label">Barn 5 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_5_birthday" type="date" value="{{ profile.properties.child_5_birthday }}" />
+                     </div>
+                  </div>
+               </div>
+
+               {% elif profile.properties.number_of_children == 5 %}
+
+               <div id="child_n1" >
+                  <div class="form-group">
+                     <label class="input-label">Barn 1 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_1_birthday" type="date" value="{{ profile.properties.child_1_birthday }}"/>
+                     </div>
+                  </div>
+               </div>
+
+               <div id="child_n2">
+                  <div class="form-group">
+                     <label class="input-label">Barn 2 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_2_birthday" type="date" value="{{ profile.properties.child_2_birthday }}"/>
+                     </div>
+                  </div>
+               </div>
+
+               <div id="child_n3" >
+                  <div class="form-group">
+                     <label class="input-label">Barn 3 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_3_birthday" type="date" value="{{ profile.properties.child_3_birthday }}"/>
+                     </div>
+                  </div>
+               </div>
+               <div id="child_n4" >
+                  <div class="form-group">
+                     <label class="input-label">Barn 4 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_4_birthday" type="date" value="{{ profile.properties.child_4_birthday }}"/>
+                     </div>
+                  </div>
+               </div>
+
+               <div id="child_n5" >
+                  <div class="form-group">
+                     <label class="input-label">Barn 5 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_5_birthday" type="date" value="{{ profile.properties.child_5_birthday }}"/>
+                     </div>
+                  </div>
+               </div>
+
+               {% else %}
+
+
+               <div id="child_n1" >
+                  <div class="form-group">
+                     <label class="input-label">Barn 1 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_1_birthday" type="date" value="{{ profile.properties.child_1_birthday }}"/>
+                     </div>
+                  </div>
+               </div>
+               <div id="child_n2" style="display: none;">
+                  <div class="form-group">
+                     <label class="input-label">Barn 2 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_2_birthday" type="date" value="dd/mm/yyyy"/>
+                     </div>
+                  </div>
+               </div>
+               <div id="child_n3" style="display: none;">
+                  <div class="form-group">
+                     <label class="input-label">Barn 3 födelsedag</label>
+                     <div>
+                        <input class="form-control" name="properties.child_3_birthday" type="date" value="dd/mm/yyyy"/>
+                     </div>
+                  </div>
+               </div>
+
+               <div id="child_n4" style="display: none;">
+                  <div class="form-group">
+                     <label class="input-label">Barn 4 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_4_birthday" type="date" value="dd/mm/yyyy"/>
+                     </div>
+                  </div>
+               </div>
+
+               <div id="child_n5" style="display: none;">
+                  <div class="form-group">
+                     <label class="input-label">Barn 5 födelsedag</label>
+                     <div >
+                        <input class="form-control" name="properties.child_5_birthday" type="date" value="dd/mm/yyyy"/>
+                     </div>
+                  </div>
+               </div>
+
+                
+               {% endif%}
+            </div>
+    
+
+            {% if profile.properties.store_signed_up == 'FI' %}
+               <div id="FI_graph_form"> 
+                  <div class="form-group">
+                     <label class="input-label input-label">Handlar du även i butik?</label>
+                     <div class="text-muted margin-bottom-sm text-sm">Välj din närmaste butik</div>
+                     <div class="custom-select">
+                        <select id="store_signed_up" name="properties.preferred_retail_store" placeholder="{{profile.properties.preferred_retail_store}}">
+                           <option selected disabled>Välj</option>
+                           <option value="Espoo Iso Omena">Espoo Iso Omena</option>
+                           <option value="Helsinki, Forum">Helsinki, Forum</option>
+                           <option value="Helsinki, Redi">Helsinki, Redi</option>
+                           <option value="Ikaalinen, Komppi">Ikaalinen, Komppi</option>
+                           <option value="Kempele, Zeppelin">Kempele, Zeppelin</option>
+                           <option value="Lappeenranta, IsoKristiina">Lappeenranta, IsoKristiina</option>
+                           <option value="Lempäälä, Ideapark">Lempäälä, Ideapark</option>
+                           <option value="Oulu, Ideapark">Oulu, Ideapark</option>
+                           <option value="Tampere, Ratina">Tampere, Ratina</option>
+                           <option value="Vantaa, Tammisto">Vantaa, Tammisto</option>
+                           <option value="Vaalimaa, Zsar">Vaalimaa, Zsar</option>
+                           <option value="Shopping online only">Endast online</option>
+                        </select>
+                     </div>
+                  </div>
+               </div>
+            {% else %}
+               <div id="FI_graph_form" style="display: none;"> 
+                  <div class="form-group">
+                     <label class="input-label input-label">Handlar du även i butik?</label>
+                     <div class="text-muted margin-bottom-sm text-sm">Välj din närmaste butik</div>
+                     <div class="custom-select">
+                        <select id="store_signed_up" name="properties.preferred_retail_store" placeholder="{{profile.properties.preferred_retail_store}}">
+                           <option selected disabled>Välj</option>
+                           <option value="Espoo Iso Omena">Espoo Iso Omena</option>
+                           <option value="Helsinki, Forum">Helsinki, Forum</option>
+                           <option value="Helsinki, Redi">Helsinki, Redi</option>
+                           <option value="Ikaalinen, Komppi">Ikaalinen, Komppi</option>
+                           <option value="Kempele, Zeppelin">Kempele, Zeppelin</option>
+                           <option value="Lappeenranta, IsoKristiina">Lappeenranta, IsoKristiina</option>
+                           <option value="Lempäälä, Ideapark">Lempäälä, Ideapark</option>
+                           <option value="Oulu, Ideapark">Oulu, Ideapark</option>
+                           <option value="Tampere, Ratina">Tampere, Ratina</option>
+                           <option value="Vantaa, Tammisto">Vantaa, Tammisto</option>
+                           <option value="Vaalimaa, Zsar">Vaalimaa, Zsar</option>
+                           <option value="Shopping online only">Endast online</option>
+                        </select>
+                     </div>
+                  </div>
+               </div>
+            {% endif%}
+            
+            {% if profile.properties.store_signed_up == 'NO' %}
+               <div id="NO_graph_form" > 
+                  <div class="form-group">
+                     <label class="input-label input-label">Handlar du även i butik?</label>
+                     <div class="text-muted margin-bottom-sm text-sm">Välj din närmaste butik</div>
+                     <div class="custom-select">
+                        <select id="store_signed_up" name="properties.preferred_retail_store" placeholder="{{profile.properties.preferred_retail_store	}}">
+                           <option selected disabled>Välj</option>
+                           
+                           <option value="Vestby, Fashion Outlet Vestby">Vestby, Fashion Outlet Vestby</option>
+                           <option value="Shopping online only">Endast online</option>
+                        </select>
+                     </div>
+                  </div>
+                  
+               </div>
+            {% else %}
+               <div id="NO_graph_form" style="display: none;"> 
+                  <div class="form-group">
+                     <label class="input-label input-label">Handlar du även i butik?</label>
+                     <div class="text-muted margin-bottom-sm text-sm">Välj din närmaste butik</div>
+                     <div class="custom-select">
+                        <select id="store_signed_up" name="properties.preferred_retail_store" placeholder="{{profile.properties.preferred_retail_store	}}">
+                           <option selected disabled>Välj</option>
+                           
+                           <option value="Vestby, Fashion Outlet Vestby">Vestby, Fashion Outlet Vestby</option>
+                           <option value="Shopping online only">Endast online</option>
+                        </select>
+                     </div>
+                  </div>
+                  
+               </div>
+            {% endif%}
+
+            {% if profile.properties.store_signed_up == 'SE' %}
+            <div id="SE_graph_form" > 
+               <div class="form-group">
+                  <label class="input-label input-label">Handlar du även i butik?</label>
+                  <div class="text-muted margin-bottom-sm text-sm">Välj din närmaste butik</div>
+                  <div class="custom-select">
+                     <select id="store_signed_up" name="properties.preferred_retail_store" placeholder="{{profile.properties.preferred_retail_store	}}">
+                        <option selected disabled>Välj</option>
+                        <
+                        <option value="Göteborg, Hede Fashion Outlet">Göteborg, Hede Fashion Outlet</option>
+                        <option value="Shopping online only">Endast online</option>
+                     </select>
+                  </div>
+               </div>
+            </div>
+            {% else %}
+            <div id="SE_graph_form" style="display: none;"> 
+               <div class="form-group">
+                  <label class="input-label input-label">Handlar du även i butik?</label>
+                  <div class="text-muted margin-bottom-sm text-sm">Välj din närmaste butik</div>
+                  <div class="custom-select">
+                     <select id="store_signed_up" name="properties.preferred_retail_store" placeholder="{{profile.properties.preferred_retail_store	}}">
+                        <option selected disabled>Välj</option>
+                        <
+                        <option value="Göteborg, Hede Fashion Outlet">Göteborg, Hede Fashion Outlet</option>
+                        <option value="Shopping online only">Endast online</option>
+                     </select>
+                  </div>
+               </div>
+            </div>
+            {% endif%}
+            
+           
+           
+
+
+            <div class="form-group">
+               <label class="input-label input-label">Vårt mål är att hålla Reima Friends uppdaterade om våra nyaste kollektioner, innovationer, erbjudanden och tips för att göra din vardag med barn problemfri och rolig! Låt oss veta vilka ämnen som intresserar dig mest:</label>
+               <div class="prefs-gender-selection">
+                  <div class="checkbox">
+                     {{ list_checkbox_macro('Tekniska produktdetaljer och funktionalitet', 3299, ) }}
+                  </div>
+                  <div class="checkbox">
+                     {{ list_checkbox_macro('Hållbarhet', 3300, ) }}
+                  </div>
+                  <div class="checkbox">
+                     {{ list_checkbox_macro('Familjeliv och artiklar', 3301, ) }}
+                  </div>
+                  <div class="checkbox">
+                     {{ list_checkbox_macro('Reima experttips', 3302, ) }}
+                  </div>
+                  <div class="checkbox">
+                     {{ list_checkbox_macro('Inspiration', 3303, ) }}
+                  </div>
+               </div>
+            </div>
+            
+
+            <div style="display: none;">
+               <label>
+               <input type="checkbox" name="UpdatedPreferencecentre:list_selected" value="3338" checked> 
+               <input name="UpdatedPreferencecentre:list_option" value="3338" type="hidden">
+               </label>
+            </div>
+             
+            
+                
+            
+            
+         </section>
+
+         <section class="prefs-section">
+            <input class="btn btn-lg btn-block-xs" name="action:update" type="submit" value="Spara uppdateringar" onClick="validatePhone(event)" />
+
+         </section>
+         <footer class="prefs-footer">
+            Vill du ta en paus? <a href="{{ url_for('preferences_centre_view', account_hash=account.hash, profile_hash=profile.hash, route='unsubscribe', **request.args)}}" class="">Avregistrera din prenumeration</a>
+          </footer>
+      </div>
+      
+     
+   </form>
+   </div>

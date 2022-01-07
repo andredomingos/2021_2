@@ -1,0 +1,8 @@
+create with a temporary img parameter (change the parameter) use the following:
+
+    <a class="rollover" summary="rollover" href="{product.url}">
+        <img class="roll" src="{product.imgNew}" width="500" style="display:block;width:100%;"  alt="Image1" border="0">
+        <div style="mso-hide:all;">
+            <img class="roll" src="{product.img}" style="max-height:0px;display:block;width:100%;" width="500" alt="" border="0">
+        </div>
+    </a>
